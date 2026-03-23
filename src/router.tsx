@@ -17,7 +17,7 @@ import HireDevelopersPage from "./components/hireDeveloper/hireDeveloper";
 import ProcessPage from "./pages/ourProcess";
 import PortfolioPage from "./pages/casestudy";
 import Servicepage from "./components/services/servicepage";
-
+ 
 function Layout() { return (<> <Navbar /> <Outlet /> <Footer /> </>); }
 
 const Routermain = () => {
