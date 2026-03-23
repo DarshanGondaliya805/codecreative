@@ -76,7 +76,7 @@ export default function Footer() {
     },
     {
       label: "Careers",
-      link: "/careers"
+      link: "/career"
     },
     {
       label: "Life @ Code Creative",
