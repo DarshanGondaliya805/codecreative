@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+<<<<<<< HEAD
 import { useEffect, useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { Typewriter } from "react-simple-typewriter"
@@ -178,13 +179,24 @@ function Particles() {
 export default function Hero() {
   const navigate = useNavigate()
   const container: any = {
+=======
+import { Typewriter } from "react-simple-typewriter"
+
+export default function Hero() {
+
+  const container:any = {
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
     hidden: {},
     show: {
       transition: { staggerChildren: 0.2 }
     }
   }
 
+<<<<<<< HEAD
   const fadeUp: any = {
+=======
+  const fadeUp:any = {
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
     hidden: { opacity: 0, y: 40 },
     show: {
       opacity: 1,
@@ -193,7 +205,11 @@ export default function Hero() {
     }
   }
 
+<<<<<<< HEAD
   const float: any = {
+=======
+  const float:any = {
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
     animate: {
       y: [0, -20, 0],
       transition: {
@@ -205,6 +221,7 @@ export default function Hero() {
   }
 
   return (
+<<<<<<< HEAD
     <section className="relative pt-14 pb-32 overflow-hidden mesh-gradient-bg min-h-screen flex items-center">
       <style>
        {`@keyframes floatY     { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-24px)} }`}
@@ -245,6 +262,10 @@ export default function Hero() {
       <div className="absolute top-1/3 right-8 opacity-8 select-none hidden lg:block" style={{ animation: "floatY 5s ease-in-out infinite .5s" }}>
         <span className="material-symbols-outlined text-violet-400" style={{ fontSize: 48 }}>hub</span>
       </div>
+=======
+    <section className="relative pt-44 pb-32 overflow-hidden mesh-gradient-bg min-h-screen flex items-center">
+
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
       {/* floating shapes */}
       <motion.div
         variants={float}
@@ -336,7 +357,10 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
             onClick={() => navigate("/casestudy")}
+=======
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
             className="w-full sm:w-auto px-10 py-5 bg-slate-900 text-white rounded-2xl font-bold text-lg shadow-xl"
           >
             Explore Our Work
@@ -345,11 +369,18 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
             onClick={() => navigate('/contactus')}
             className="w-full sm:w-auto px-10 py-5 bg-white border border-slate-200 text-slate-900 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 shadow-sm"
           >
             <span className="material-symbols-outlined">phone</span>
             Let's Conect
+=======
+            className="w-full sm:w-auto px-10 py-5 bg-white border border-slate-200 text-slate-900 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 shadow-sm"
+          >
+            <span className="material-symbols-outlined">play_circle</span>
+            Watch Reel
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
           </motion.button>
 
         </motion.div>
@@ -361,7 +392,11 @@ export default function Hero() {
         >
           {[
             ["verified", "AWS Experts"],
+<<<<<<< HEAD
             ["cloud", "Cloud Experts"],
+=======
+            ["google", "Cloud Experts"],
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
             ["star", "Top Rated 2026"],
             ["language", "Global Delivery"]
           ].map(([icon, text], i) => (

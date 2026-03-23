@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion, AnimatePresence, useInView } from "framer-motion"
 import { useState, useRef } from "react"
 // import Lottie from "lottie-react"
@@ -147,6 +148,16 @@ interface FaqItem {
   accent: string
   bg: string
   icon: string
+=======
+import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react"
+
+interface FaqItem {
+  question: string
+  answer: string
+  iconColor: string
+  hoverBorder: string
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
 }
 
 const faqs: FaqItem[] = [
@@ -154,30 +165,47 @@ const faqs: FaqItem[] = [
     question: "What services do you provide?",
     answer:
       "Comprehensive digital solutions including web development, mobile applications, SaaS architecture, and custom AI development tailored to your business needs.",
+<<<<<<< HEAD
     accent: "#6085FF",
     bg: "rgba(96,133,255,0.07)",
     icon: "🌐",
+=======
+    iconColor: "text-primary",
+    hoverBorder: "hover:border-primary/50",
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
   },
   {
     question: "How long does a project take?",
     answer:
+<<<<<<< HEAD
       "Timelines vary based on complexity. A typical MVP takes 8–12 weeks, while larger enterprise transformations can span 6+ months with continuous iterative delivery.",
     accent: "#A855F7",
     bg: "rgba(168,85,247,0.07)",
     icon: "⏱",
+=======
+      "Timelines vary based on complexity. A typical MVP takes 8-12 weeks, while larger enterprise transformations can span 6+ months with continuous iterative delivery.",
+    iconColor: "text-purple-500",
+    hoverBorder: "hover:border-purple-500/50",
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
   },
   {
     question: "What technologies do you use?",
     answer:
       "We specialize in modern stacks including React, Next.js, Node.js, Python, AWS, and Flutter, ensuring your product is scalable, secure, and future-proof.",
+<<<<<<< HEAD
     accent: "#06B6D4",
     bg: "rgba(6,182,212,0.07)",
     icon: "⚙️",
+=======
+    iconColor: "text-cyan-500",
+    hoverBorder: "hover:border-cyan-500/50",
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
   },
   {
     question: "Do you provide support after development?",
     answer:
       "Yes, we offer 24/7 dedicated support and maintenance packages to ensure zero downtime and continuous optimization as your business grows.",
+<<<<<<< HEAD
     accent: "#F97316",
     bg: "rgba(249,115,22,0.07)",
     icon: "🛡️",
@@ -320,11 +348,53 @@ export default function FAQ() {
           {faqs.map((faq, index) => {
             const isOpen = active === index
             const isHovered = hoveredIndex === index
+=======
+    iconColor: "text-orange-500",
+    hoverBorder: "hover:border-orange-500/50",
+  },
+]
+
+export default function FAQ() {
+  const [active, setActive] = useState<number | null>(null)
+
+  const toggle = (index: number) => {
+    setActive(active === index ? null : index)
+  }
+
+  return (
+    <section className="py-28 bg-white dark:bg-background-dark" id="faq">
+
+      <div className="max-w-[800px] mx-auto px-6">
+
+        {/* heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-sm font-extrabold text-primary uppercase tracking-widest mb-4">
+            Got Questions?
+          </h2>
+
+          <h3 className="text-4xl font-bold">
+            Frequently Asked Questions
+          </h3>
+        </motion.div>
+
+        {/* faq list */}
+        <div className="space-y-4">
+
+          {faqs.map((faq, index) => {
+
+            const isOpen = active === index
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
 
             return (
               <motion.div
                 key={faq.question}
                 layout
+<<<<<<< HEAD
                 initial={{ opacity: 0, x: -40 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.55, delay: 0.15 + index * 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -439,12 +509,37 @@ export default function FAQ() {
                 </button>
 
                 {/* Answer */}
+=======
+                className={`group bg-slate-50 dark:bg-slate-900/50 backdrop-blur-sm border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden transition-all ${faq.hoverBorder}`}
+              >
+
+                {/* question */}
+                <button
+                  onClick={() => toggle(index)}
+                  className="w-full p-6 text-left flex items-center justify-between"
+                >
+                  <span className="font-bold text-lg">
+                    {faq.question}
+                  </span>
+
+                  <motion.span
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className={`material-symbols-outlined ${faq.iconColor}`}
+                  >
+                    expand_more
+                  </motion.span>
+                </button>
+
+                {/* answer */}
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
+<<<<<<< HEAD
                       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                       className="overflow-hidden"
                     >
@@ -516,6 +611,21 @@ export default function FAQ() {
             </span>
           </div>
         </motion.div>
+=======
+                      transition={{ duration: 0.35 }}
+                      className="px-6 pb-6 text-slate-500 leading-relaxed"
+                    >
+                      {faq.answer}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+              </motion.div>
+            )
+          })}
+
+        </div>
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
 
       </div>
     </section>

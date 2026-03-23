@@ -1,6 +1,10 @@
 "use client"
 
+<<<<<<< HEAD
 import { motion, useScroll,  useSpring } from "framer-motion"
+=======
+import { motion, useScroll, useTransform, useMotionValue, useSpring, animate } from "framer-motion"
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
 import { useRef, useEffect, useState } from "react"
 
 interface TimelineItem {
@@ -135,6 +139,10 @@ export default function Timeline() {
   const lineRef = useRef<HTMLDivElement>(null)
   const nodeRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeIndex, setActiveIndex] = useState(-1)
+<<<<<<< HEAD
+=======
+  const [rocketPx, setRocketPx] = useState(0)
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
   const [lineH, setLineH] = useState(0)
 
   const { scrollYProgress } = useScroll({

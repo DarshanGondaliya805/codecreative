@@ -11,7 +11,11 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
+<<<<<<< HEAD
       " Code Creative transformed our legacy system into a high-performance cloud application. Their attention to detail and design is unmatched.",
+=======
+      "Morphos IT transformed our legacy system into a high-performance cloud application. Their attention to detail and design is unmatched.",
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
     name: "James Wilson",
     role: "CTO, FinFlow",
     avatar:
@@ -72,7 +76,11 @@ export default function Testimonials() {
             </h2>
 
             <p className="text-slate-500 mb-8 leading-relaxed">
+<<<<<<< HEAD
               Join the 100+ companies that trust Code Creative with their digital transformation journey.
+=======
+              Join the 100+ companies that trust Morphos IT with their digital transformation journey.
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
             </p>
 
             <div className="flex gap-4">

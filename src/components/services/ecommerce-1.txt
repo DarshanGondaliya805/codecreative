@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head>
@@ -536,4 +537,544 @@
 </div>
 </div>
 </footer>
+=======
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neural Amber | E-Commerce Development Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ffb599",
+              "tertiary-fixed": "#d1e4ff",
+              "on-tertiary-fixed-variant": "#00497c",
+              "on-secondary-container": "#ff9c74",
+              "surface-bright": "#45362f",
+              "on-surface": "#f6ded3",
+              "on-secondary": "#5a1c00",
+              "surface": "#1c110b",
+              "secondary-container": "#783112",
+              "outline": "#a98a7f",
+              "inverse-on-surface": "#3b2d27",
+              "outline-variant": "#5a4138",
+              "on-primary-fixed": "#370e00",
+              "secondary-fixed-dim": "#ffb599",
+              "on-tertiary": "#003258",
+              "primary-container": "#f5611b",
+              "on-tertiary-fixed": "#001d36",
+              "tertiary": "#9ecaff",
+              "secondary-fixed": "#ffdbce",
+              "background": "#1c110b",
+              "surface-tint": "#ffb599",
+              "on-error-container": "#ffdad6",
+              "primary-fixed-dim": "#ffb599",
+              "on-surface-variant": "#e2bfb3",
+              "inverse-surface": "#f6ded3",
+              "surface-container-low": "#251913",
+              "surface-dim": "#1c110b",
+              "inverse-primary": "#a73a00",
+              "surface-container-highest": "#40322b",
+              "tertiary-fixed-dim": "#9ecaff",
+              "surface-variant": "#40322b",
+              "on-background": "#f6ded3",
+              "surface-container": "#291d17",
+              "on-secondary-fixed": "#370e00",
+              "on-primary": "#5a1c00",
+              "error-container": "#93000a",
+              "on-primary-container": "#4f1700",
+              "secondary": "#ffb599",
+              "tertiary-container": "#1b95f1",
+              "surface-container-lowest": "#160c07",
+              "surface-container-high": "#352720",
+              "primary-fixed": "#ffdbce",
+              "on-primary-fixed-variant": "#7f2b00",
+              "on-error": "#690005",
+              "on-tertiary-container": "#002b4d",
+              "on-secondary-fixed-variant": "#783112",
+              "error": "#ffb4ab"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #1c110b; color: #f6ded3; margin: 0; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .glass-panel {
+            background: rgba(64, 50, 43, 0.4);
+            backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 181, 153, 0.2);
+        }
+        .neural-gradient {
+            background: linear-gradient(135deg, #ffb599 0%, #f5611b 100%);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 32px 0 rgba(236, 91, 19, 0.12);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 glass-panel border-b-0">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 neural-gradient rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-xl" style="font-variation-settings: 'FILL' 1;">neurology</span>
+</div>
+<span class="font-headline text-xl font-bold tracking-tight text-on-surface">Neural Amber</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="neural-gradient px-6 py-2.5 rounded-xl text-on-primary-fixed font-bold text-sm glow-hover transition-all">
+                Get Started
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden pt-12 pb-24 px-6">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-primary-container/5 blur-[100px] rounded-full"></div>
+</div>
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-surface-container px-3 py-1 rounded-full border border-outline-variant/30">
+<span class="w-2 h-2 rounded-full neural-gradient"></span>
+<span class="text-xs font-bold tracking-widest uppercase text-on-surface-variant">Future-Ready Commerce</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight text-on-surface">
+                    Powerful <span class="text-primary">E-Commerce</span> Solutions for Modern Businesses
+                </h1>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                    Scalable, secure, and high-performance online stores engineered to convert visitors into loyal customers through cutting-edge neural architectures.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="neural-gradient px-8 py-4 rounded-xl text-on-primary-fixed font-bold glow-hover transition-all">
+                        Start Your Online Store
+                    </button>
+<button class="glass-panel px-8 py-4 rounded-xl text-on-surface border border-outline-variant/50 font-bold hover:bg-surface-variant/40 transition-all">
+                        Get Free Consultation
+                    </button>
+</div>
+<div class="flex items-center gap-6 pt-8 grayscale opacity-60">
+<span class="material-symbols-outlined text-4xl" data-icon="payments">payments</span>
+<span class="material-symbols-outlined text-4xl" data-icon="shopping_cart">shopping_cart</span>
+<span class="material-symbols-outlined text-4xl" data-icon="credit_card">credit_card</span>
+<span class="material-symbols-outlined text-4xl" data-icon="storefront">storefront</span>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="relative z-10 glass-panel p-4 rounded-[2rem] border-outline-variant/20 shadow-2xl rotate-3">
+<img alt="Dashboard UI" class="rounded-[1.5rem] w-full h-[500px] object-cover" data-alt="Clean minimalist e-commerce dashboard interface visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhd8JkudXe0dgo6Ne5I7qSvP-zarfA5JKdJp2PWyZnKsYnUfkXTQkF7o8CeHkyjB3hMf0-I7lrYq8DjxRVIPFkhNeE0sspF3fxO6IQ5oNh7WQCiYGVF-6J0ftoANx7QtvQOW_OxpQBdXfVC8m6XDu4jst6ICmmALw00a36t1aEjnThgMmVKJpSqUMdJ9k2ABXqQORsfd76Os4oPU_EJPBOLV8HEgUDFfTKthRSApHK2aFqsE927ftcKTfu7HXCu9609IbNqXVEbws"/>
+</div>
+<div class="absolute -top-10 -left-10 z-20 glass-panel p-6 rounded-2xl w-48 border-primary/20 -rotate-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="trending_up">trending_up</span>
+<span class="text-xs font-bold">Growth</span>
+</div>
+<div class="h-2 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full neural-gradient w-3/4"></div>
+</div>
+<div class="mt-2 text-xl font-headline font-bold text-on-surface">+124%</div>
+</div>
+<div class="absolute bottom-10 -right-8 z-20 glass-panel p-4 rounded-2xl w-56 border-primary/20 rotate-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<div class="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider">Security</div>
+<div class="text-sm font-bold">Neural Protected</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- E-Commerce Services -->
+<section class="bg-surface-container-lowest py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-6">Omnichannel <span class="text-primary">Excellence</span></h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Our deep technical expertise spans across the world's leading e-commerce engines, tailored to your specific scale.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service Cards -->
+<div class="glass-panel p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="code">code</span>
+<h3 class="text-xl font-bold mb-4">Custom Web Dev</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Bespoke storefronts built from the ground up for unique brand requirements and extreme performance.</p>
+</div>
+<div class="glass-panel p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="shopping_bag">shopping_bag</span>
+<h3 class="text-xl font-bold mb-4">Shopify Experts</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Scalable Shopify Plus implementations with custom Liquid themes and private app development.</p>
+</div>
+<div class="glass-panel p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="terminal">terminal</span>
+<h3 class="text-xl font-bold mb-4">Headless Commerce</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">De-couple your frontend from the backend for lightning-fast speeds and ultimate design freedom.</p>
+</div>
+<div class="glass-panel p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="hub">hub</span>
+<h3 class="text-xl font-bold mb-4">Magento / Adobe</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Enterprise-grade architecture for complex catalogs and high-volume global transactions.</p>
+</div>
+<div class="glass-panel p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="api">api</span>
+<h3 class="text-xl font-bold mb-4">API Integration</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Seamlessly connect your ERP, CRM, and logistics software with robust neural middleware.</p>
+</div>
+<div class="glass-panel p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="smartphone">smartphone</span>
+<h3 class="text-xl font-bold mb-4">E-Commerce Apps</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Native iOS and Android shopping experiences that keep your brand in your customers' pockets.</p>
+</div>
+<div class="glass-panel p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="group_work">group_work</span>
+<h3 class="text-xl font-bold mb-4">Multi-Vendor</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Launch your own marketplace like Amazon or Etsy with complex vendor management systems.</p>
+</div>
+<div class="glass-panel p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="rocket_launch">rocket_launch</span>
+<h3 class="text-xl font-bold mb-4">Fast Checkout</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Conversion-optimized checkout flows designed to reduce abandonment and boost AOV.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Platforms & Features Bento Grid -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-3 gap-6">
+<!-- Platform Showcase -->
+<div class="lg:col-span-2 glass-panel p-10 rounded-[2.5rem] relative overflow-hidden">
+<div class="relative z-10 max-w-md">
+<h3 class="font-headline text-3xl font-bold mb-4 text-on-surface">Tech-Agnostic Approach</h3>
+<p class="text-on-surface-variant mb-8">We select the right engine for your business goals, not just the one we're used to.</p>
+<div class="flex flex-wrap gap-4">
+<div class="px-5 py-3 rounded-2xl bg-surface-container-high border border-outline-variant/30 flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(236,91,19,0.8)]"></span>
+<span class="text-sm font-bold">Shopify</span>
+</div>
+<div class="px-5 py-3 rounded-2xl bg-surface-container-high border border-outline-variant/30 flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(236,91,19,0.8)]"></span>
+<span class="text-sm font-bold">WooCommerce</span>
+</div>
+<div class="px-5 py-3 rounded-2xl bg-surface-container-high border border-outline-variant/30 flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(236,91,19,0.8)]"></span>
+<span class="text-sm font-bold">Magento</span>
+</div>
+<div class="px-5 py-3 rounded-2xl bg-surface-container-high border border-outline-variant/30 flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(236,91,19,0.8)]"></span>
+<span class="text-sm font-bold">BigCommerce</span>
+</div>
+</div>
+</div>
+<div class="absolute right-[-5%] bottom-[-10%] opacity-20 lg:opacity-100">
+<span class="material-symbols-outlined text-[20rem] text-primary-container/20" data-icon="architecture">architecture</span>
+</div>
+</div>
+<!-- Secure Payment Highlight -->
+<div class="neural-gradient p-10 rounded-[2.5rem] text-on-primary-fixed flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-5xl mb-6" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+<h3 class="font-headline text-3xl font-bold mb-4">Fort Knox Security</h3>
+<p class="text-on-primary-fixed/80">Every transaction is protected by neural encryption and PCI-DSS compliant architecture.</p>
+</div>
+<div class="mt-8 flex -space-x-4">
+<div class="w-12 h-12 rounded-full glass-panel border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="shield">shield</span>
+</div>
+<div class="w-12 h-12 rounded-full glass-panel border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="key">key</span>
+</div>
+<div class="w-12 h-12 rounded-full glass-panel border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="gpp_good">gpp_good</span>
+</div>
+</div>
+</div>
+<!-- Mobile First -->
+<div class="glass-panel p-10 rounded-[2.5rem] flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-5xl text-primary mb-6" data-icon="ad_units">ad_units</span>
+<h3 class="font-headline text-2xl font-bold mb-2">Mobile-Native UX</h3>
+<p class="text-on-surface-variant text-sm">70% of traffic is mobile. We design for thumbs, not just clicks.</p>
+</div>
+<!-- Fast Load -->
+<div class="glass-panel p-10 rounded-[2.5rem] lg:col-span-2 grid md:grid-cols-2 gap-8 items-center">
+<div>
+<h3 class="font-headline text-2xl font-bold mb-4">Speed is Revenue</h3>
+<p class="text-on-surface-variant text-sm mb-6">A 1-second delay in page load time can result in a 7% reduction in conversions. We optimize for Core Web Vitals.</p>
+<div class="flex items-center gap-4">
+<div class="text-4xl font-headline font-bold text-primary">0.8s</div>
+<div class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Avg Load Time</div>
+</div>
+</div>
+<div class="relative h-32 flex items-end gap-2">
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[40%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t-lg h-[60%]"></div>
+<div class="flex-1 bg-primary/60 rounded-t-lg h-[85%]"></div>
+<div class="flex-1 neural-gradient rounded-t-lg h-[100%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Development Process -->
+<section class="py-24 px-6 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-20 text-center">The <span class="text-primary">Neural</span> Path to Launch</h2>
+<div class="relative">
+<div class="absolute top-1/2 left-0 w-full h-1 bg-surface-container hidden lg:block transform -translate-y-1/2"></div>
+<div class="grid lg:grid-cols-6 gap-8 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full glass-panel border-2 border-primary flex items-center justify-center mb-6 group-hover:bg-primary transition-all">
+<span class="font-headline text-xl font-bold group-hover:text-on-primary">01</span>
+</div>
+<h4 class="font-bold mb-2">Analysis</h4>
+<p class="text-xs text-on-surface-variant px-4">Defining your market and technical needs.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full glass-panel border-2 border-primary/40 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary transition-all">
+<span class="font-headline text-xl font-bold group-hover:text-on-primary">02</span>
+</div>
+<h4 class="font-bold mb-2">Store Design</h4>
+<p class="text-xs text-on-surface-variant px-4">Crafting the high-fidelity UI/UX prototype.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full glass-panel border-2 border-primary/40 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary transition-all">
+<span class="font-headline text-xl font-bold group-hover:text-on-primary">03</span>
+</div>
+<h4 class="font-bold mb-2">Development</h4>
+<p class="text-xs text-on-surface-variant px-4">Robust coding of the core engine.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full glass-panel border-2 border-primary/40 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary transition-all">
+<span class="font-headline text-xl font-bold group-hover:text-on-primary">04</span>
+</div>
+<h4 class="font-bold mb-2">Integrations</h4>
+<p class="text-xs text-on-surface-variant px-4">Connecting payments and logisitics.</p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full glass-panel border-2 border-primary/40 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary transition-all">
+<span class="font-headline text-xl font-bold group-hover:text-on-primary">05</span>
+</div>
+<h4 class="font-bold mb-2">Testing</h4>
+<p class="text-xs text-on-surface-variant px-4">Rigorous quality assurance and security.</p>
+</div>
+<!-- Step 6 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full neural-gradient flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(236,91,19,0.4)]">
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="rocket">rocket</span>
+</div>
+<h4 class="font-bold mb-2">Launch</h4>
+<p class="text-xs text-on-surface-variant px-4">Go live and continuous support.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Industries Served -->
+<section class="py-24 px-6 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/3">
+<h2 class="font-headline text-3xl font-bold mb-6">Vertical <span class="text-primary">Specialization</span></h2>
+<p class="text-on-surface-variant">We understand the unique nuances of different sectors, from inventory-heavy electronics to high-aesthetic fashion.</p>
+</div>
+<div class="md:w-2/3 grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="bg-surface-container p-6 rounded-2xl flex flex-col items-center gap-4 hover:border-primary/50 border border-transparent transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="checkroom">checkroom</span>
+<span class="text-sm font-bold">Fashion</span>
+</div>
+<div class="bg-surface-container p-6 rounded-2xl flex flex-col items-center gap-4 hover:border-primary/50 border border-transparent transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="laptop_mac">laptop_mac</span>
+<span class="text-sm font-bold">Electronics</span>
+</div>
+<div class="bg-surface-container p-6 rounded-2xl flex flex-col items-center gap-4 hover:border-primary/50 border border-transparent transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="face_6">face_6</span>
+<span class="text-sm font-bold">Beauty</span>
+</div>
+<div class="bg-surface-container p-6 rounded-2xl flex flex-col items-center gap-4 hover:border-primary/50 border border-transparent transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="grocery">grocery</span>
+<span class="text-sm font-bold">Grocery</span>
+</div>
+<div class="bg-surface-container p-6 rounded-2xl flex flex-col items-center gap-4 hover:border-primary/50 border border-transparent transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="chair">chair</span>
+<span class="text-sm font-bold">Furniture</span>
+</div>
+<div class="bg-surface-container p-6 rounded-2xl flex flex-col items-center gap-4 hover:border-primary/50 border border-transparent transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="medical_services">medical_services</span>
+<span class="text-sm font-bold">Health</span>
+</div>
+<div class="bg-surface-container p-6 rounded-2xl flex flex-col items-center gap-4 hover:border-primary/50 border border-transparent transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="fitness_center">fitness_center</span>
+<span class="text-sm font-bold">Sports</span>
+</div>
+<div class="bg-surface-container p-6 rounded-2xl flex flex-col items-center gap-4 hover:border-primary/50 border border-transparent transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="token">token</span>
+<span class="text-sm font-bold">Digital</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Call To Action -->
+<section class="py-24 px-6">
+<div class="max-w-7xl mx-auto neural-gradient rounded-[3rem] p-12 md:p-24 relative overflow-hidden text-center md:text-left">
+<div class="absolute right-0 top-0 w-1/2 h-full bg-black/10 skew-x-[-20deg] translate-x-1/2"></div>
+<div class="relative z-10 grid md:grid-cols-2 items-center gap-12">
+<div>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-primary-fixed mb-6">Ready to Launch Your Online Store?</h2>
+<p class="text-on-primary-fixed/80 text-lg mb-8">Join hundreds of global brands scaling their revenue with our neural commerce ecosystem.</p>
+</div>
+<div class="flex justify-center md:justify-end">
+<button class="bg-surface px-12 py-5 rounded-2xl text-primary font-bold text-xl hover:scale-105 transition-transform shadow-2xl">
+                        Build My Store
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="font-headline text-4xl font-bold mb-8">Let's Discuss Your <span class="text-primary">Project</span></h2>
+<p class="text-on-surface-variant mb-12">Our architects are ready to blueprint your digital storefront. Reach out for a specialized technical audit.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl glass-panel flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">Email Us</p>
+<p class="font-bold">hello@neuralamber.ai</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl glass-panel flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">HQ Location</p>
+<p class="font-bold">Silicon Valley, CA</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-panel p-10 rounded-[2.5rem] border-outline-variant/30">
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant ml-2 uppercase tracking-wider">Full Name</label>
+<input class="w-full bg-surface-container-lowest border-0 rounded-xl px-4 py-3 focus:ring-1 focus:ring-primary/40 text-on-surface placeholder:text-outline-variant" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant ml-2 uppercase tracking-wider">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-0 rounded-xl px-4 py-3 focus:ring-1 focus:ring-primary/40 text-on-surface placeholder:text-outline-variant" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant ml-2 uppercase tracking-wider">Business Type</label>
+<select class="w-full bg-surface-container-lowest border-0 rounded-xl px-4 py-3 focus:ring-1 focus:ring-primary/40 text-on-surface">
+<option>D2C Brand</option>
+<option>B2B Marketplace</option>
+<option>Retailer</option>
+<option>Startup</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant ml-2 uppercase tracking-wider">Phone</label>
+<input class="w-full bg-surface-container-lowest border-0 rounded-xl px-4 py-3 focus:ring-1 focus:ring-primary/40 text-on-surface placeholder:text-outline-variant" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant ml-2 uppercase tracking-wider">Project Details</label>
+<textarea class="w-full bg-surface-container-lowest border-0 rounded-xl px-4 py-3 focus:ring-1 focus:ring-primary/40 text-on-surface placeholder:text-outline-variant" placeholder="Tell us about your requirements..." rows="4"></textarea>
+</div>
+<button class="w-full neural-gradient py-4 rounded-xl text-on-primary-fixed font-bold glow-hover transition-all">
+                        Submit Inquiry
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-20 px-6 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-6 h-6 neural-gradient rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-xs" style="font-variation-settings: 'FILL' 1;">neurology</span>
+</div>
+<span class="font-headline text-lg font-bold tracking-tight text-on-surface">Neural Amber</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Architecting the future of global commerce through intelligence and technical precision.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-lg glass-panel flex items-center justify-center hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl" data-icon="public">public</span></a>
+<a class="w-10 h-10 rounded-lg glass-panel flex items-center justify-center hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl" data-icon="alternate_email">alternate_email</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div>
+<h5 class="text-on-surface font-bold mb-6">Services</h5>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Custom Web Dev</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shopify Apps</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Headless Architecture</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Magento Migration</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-on-surface font-bold mb-6">Company</h5>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Portfolio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Case Studies</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h5 class="text-on-surface font-bold mb-6">Newsletter</h5>
+<p class="text-sm text-on-surface-variant mb-4">Stay updated with commerce trends.</p>
+<div class="flex gap-2">
+<input class="bg-surface-container border-0 rounded-lg px-4 py-2 text-sm w-full" placeholder="Email" type="email"/>
+<button class="bg-primary-container p-2 rounded-lg text-white"><span class="material-symbols-outlined" data-icon="send">send</span></button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-on-surface-variant">© 2024 Neural Amber IT Solutions. All rights reserved.</p>
+<div class="flex gap-8 text-xs text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+>>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
 </body></html>
