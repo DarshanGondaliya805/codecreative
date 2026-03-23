@@ -1,10 +1,6 @@
 "use client"
 
-<<<<<<< HEAD
 import { useState } from "react"
-=======
-import { useState, useRef } from "react"
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
 import { motion, AnimatePresence } from "framer-motion"
 
 const techStack = [
@@ -16,7 +12,6 @@ const techStack = [
     sections: {
       Frontend: [
         { title: "React", desc: "UI Library", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-<<<<<<< HEAD
         { title: "Next.js", desc: "React Framework", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
         { title: "Vue.js", desc: "Framework", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
         { title: "Nuxt.js", desc: "Vue Framework", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg" },
@@ -40,28 +35,13 @@ const techStack = [
         { title: "Laravel", desc: "PHP Framework", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" },
         { title: "GraphQL", desc: "API Layer", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" },
         { title: "REST API", desc: "Architecture", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
-=======
-        { title: "TypeScript", desc: "Language", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-        { title: "Next.js", desc: "Framework", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-        { title: "Tailwind", desc: "Styling", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-        { title: "Vue.js", desc: "Framework", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
-      ],
-      Backend: [
-        { title: "GraphQL", desc: "API Layer", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" },
-        { title: "Node.js", desc: "Runtime", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-        { title: "PostgreSQL", desc: "Database", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-        { title: "Redis", desc: "Cache", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
       ],
       Mobile: [
         { title: "React Native", desc: "Cross Platform", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         { title: "Flutter", desc: "Framework", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
         { title: "Swift", desc: "iOS Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" },
         { title: "Kotlin", desc: "Android Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" },
-<<<<<<< HEAD
         { title: "Ionic", desc: "Hybrid Apps", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg" },
-=======
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
       ],
       DevOps: [
         { title: "Docker", desc: "Container", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
@@ -354,11 +334,7 @@ export default function TechStack() {
           </div>
         </motion.div>
 
-<<<<<<< HEAD
         {/* Bottom stats bar
-=======
-        {/* Bottom stats bar */}
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -381,11 +357,7 @@ export default function TechStack() {
               </p>
             </div>
           ))}
-<<<<<<< HEAD
         </motion.div> */}
-=======
-        </motion.div>
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
 
       </div>
     </section>

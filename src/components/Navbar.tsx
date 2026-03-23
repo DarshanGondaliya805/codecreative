@@ -1,7 +1,6 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { WavyText } from "./WavyText"
-<<<<<<< HEAD
 import { Link, useNavigate } from "react-router-dom"
 
 export default function Navbar() {
@@ -9,12 +8,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [open1, setOpen1] = useState(false)
   const [open2, setOpen2] = useState(false)
-=======
-
-export default function Navbar() {
-  const [open, setOpen] = useState(false)
-  const [open1, setOpen1] = useState(false)
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
   const dropdown: any = {
     hidden: { opacity: 0, y: 20, scale: 0.95 },
     show: {
@@ -39,17 +32,10 @@ export default function Navbar() {
     //       <h1 className="text-xl font-extrabold tracking-tight">Code<span className="text-primary">Creative</span></h1>
     //     </div>
     //     <div className="hidden md:flex items-center gap-10">
-<<<<<<< HEAD
     //       <Link className="text-sm font-semibold hover:text-primary transition-colors" to="#services">Services</Link>
     //       <Link className="text-sm font-semibold hover:text-primary transition-colors" to="#about">About</Link>
     //       <Link className="text-sm font-semibold hover:text-primary transition-colors" to="#work">Portfolio</Link>
     //       <Link className="text-sm font-semibold hover:text-primary transition-colors" to="#process">Process</Link>
-=======
-    //       <a className="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
-    //       <a className="text-sm font-semibold hover:text-primary transition-colors" href="#about">About</a>
-    //       <a className="text-sm font-semibold hover:text-primary transition-colors" href="#work">Portfolio</a>
-    //       <a className="text-sm font-semibold hover:text-primary transition-colors" href="#process">Process</a>
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
     //       <button className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-primary/25 active:scale-95">
     //         Start a Project
     //       </button>
@@ -82,21 +68,12 @@ export default function Navbar() {
             <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Code<span className="text-primary">Creative</span></span>
           </motion.div>
           <nav className="hidden lg:flex items-center gap-8">
-<<<<<<< HEAD
             <motion.button
               variants={navItem}
               initial="rest"
               whileHover="hover"
               onClick={() => navigate("/")}
               className="relative text-sm font-semibold text-slate-600 hover:text-primary"
-=======
-            <motion.a
-              variants={navItem}
-              initial="rest"
-              whileHover="hover"
-              className="relative text-sm font-semibold text-slate-600 hover:text-primary"
-              href="#"
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
             >
               {/* Home */}
               <WavyText text="Home" />
@@ -106,11 +83,7 @@ export default function Navbar() {
                 whileHover={{ width: "100%" }}
                 transition={{ duration: 0.25 }}
               />
-<<<<<<< HEAD
             </motion.button>
-=======
-            </motion.a>
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
 
             <div className="group relative py-7"
               onMouseEnter={() => setOpen(true)}
@@ -118,10 +91,7 @@ export default function Navbar() {
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
                 onClick={() => navigate("/")}
-=======
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
                 className="flex items-center gap-1 text-sm font-semibold text-slate-600 hover:text-primary"
               >
                 <WavyText text="Services" />
@@ -142,7 +112,6 @@ export default function Navbar() {
 
                 <div className="grid grid-cols-3 gap-8">
                   <div className="flex flex-col gap-6">
-<<<<<<< HEAD
                     <Link className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" to="/service/webdesigning">
                       <span className="material-symbols-outlined text-primary">brush</span>
                       <div>
@@ -153,9 +122,6 @@ export default function Navbar() {
                       </div>
                     </Link>
                     <Link className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" to="/service/webdevelopment">
-=======
-                    <a className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" href="#">
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
                       <span className="material-symbols-outlined text-primary">code</span>
                       <div>
                         <div className="text-sm font-bold">
@@ -163,7 +129,6 @@ export default function Navbar() {
                         </div>
                         <div className="text-xs text-slate-500 mt-1">Custom scalable web apps</div>
                       </div>
-<<<<<<< HEAD
                     </Link>
                     <Link className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" to="/service/backenddevelopment">
                       <span className="material-symbols-outlined text-primary">dns</span>
@@ -186,28 +151,6 @@ export default function Navbar() {
                   </div>
                   <div className="flex flex-col gap-6">
                     <Link className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" to="/service/appdevelopment">
-=======
-                    </a>
-                    <a className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" href="#">
-                      <span className="material-symbols-outlined text-primary">cloud</span>
-                      <div>
-                        <div className="text-sm font-bold"><WavyText text="Cloud Solutions" /></div>
-                        <div className="text-xs text-slate-500 mt-1">Architecture &amp; migration</div>
-                      </div>
-                    </a>
-                    <a className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" href="#">
-                      <span className="material-symbols-outlined text-primary">terminal</span>
-                      <div>
-                        <div className="text-sm font-bold">
-                          <WavyText text="DevOps Services" />
-                        </div>
-                        <div className="text-xs text-slate-500 mt-1">CI/CD &amp; automation</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div className="flex flex-col gap-6">
-                    <a className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" href="#">
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
                       <span className="material-symbols-outlined text-primary">smartphone</span>
                       <div>
                         <div className="text-sm font-bold">
@@ -215,7 +158,6 @@ export default function Navbar() {
                         </div>
                         <div className="text-xs text-slate-500 mt-1">Native &amp; cross-platform</div>
                       </div>
-<<<<<<< HEAD
                     </Link>
                     <Link className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" to="/service/clouddevelopment">
                       <span className="material-symbols-outlined text-primary">cloud</span>
@@ -225,52 +167,31 @@ export default function Navbar() {
                       </div>
                     </Link>
                     <Link className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" to="/service/aimldevelopment">
-=======
-                    </a>
-                    <a className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" href="#">
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
                       <span className="material-symbols-outlined text-primary">psychology</span>
                       <div>
                         <div className="text-sm font-bold">
                           <WavyText text="AI Development" />
                         </div>
-<<<<<<< HEAD
                         <div className="text-xs text-slate-500 mt-1"> automation & LLM integration</div>
                       </div>
                     </Link>
                     <Link className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" to="/service/ecommercedevelopment">
-=======
-                        <div className="text-xs text-slate-500 mt-1">Custom LLM solutions</div>
-                      </div>
-                    </a>
-                    <a className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" href="#">
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
                       <span className="material-symbols-outlined text-primary">shopping_cart</span>
                       <div>
                         <div className="text-sm font-bold">
                           <WavyText text="E-commerce" />
                         </div>
-<<<<<<< HEAD
                         <div className="text-xs text-slate-500 mt-1">Conversion-driven online stores & platforms</div>
                       </div>
                     </Link>
                   </div>
                   <div className="flex flex-col gap-6">
                     <Link className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" to="/service/uiuxdevelopment">
-=======
-                        <div className="text-xs text-slate-500 mt-1">Conversion-led stores</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div className="flex flex-col gap-6">
-                    <a className="group/item flex gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 p-3 rounded-xl transition-all" href="#">
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
                       <span className="material-symbols-outlined text-primary">palette</span>
                       <div>
                         <div className="text-sm font-bold">
                           <WavyText text="UI/UX Design" />
                         </div>
-<<<<<<< HEAD
                         <div className="text-xs text-slate-500 mt-1">User-first interfaces with premium experience</div>
                       </div>
                     </Link>
@@ -301,11 +222,6 @@ export default function Navbar() {
                         <div className="text-xs text-slate-500 mt-1">Performance marketing & growth campaigns</div>
                       </div>
                     </Link>
-=======
-                        <div className="text-xs text-slate-500 mt-1">User-centric digital experiences</div>
-                      </div>
-                    </a>
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
                   </div>
                 </div>
               </motion.div>
@@ -316,10 +232,7 @@ export default function Navbar() {
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
                 onClick={() => navigate('/hiredeveloper')}
-=======
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
                 className="flex items-center gap-1 text-sm font-semibold text-slate-600 hover:text-primary"
               >
                 <WavyText text="Hire Developers" />
@@ -336,7 +249,6 @@ export default function Navbar() {
                 initial="hidden"
                 animate={open1 ? "show" : "hidden"}
                 className="mega-menu absolute top-full -translate-x-1/2 w-[720px] bg-white rounded-xl shadow-2xl border p-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible pointer-events-none group-hover:pointer-events-auto transition-all duration-200" >
-<<<<<<< HEAD
                 <div className="grid grid-cols-3">
                   <div className="p-6 border-r border-slate-50 dark:border-slate-800">
                     <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">By Platform</h3>
@@ -357,21 +269,11 @@ export default function Navbar() {
                         <WavyText text="UI & UX " />
                         (Figma/Adobe/Canva)
                       </Link>
-=======
-                <div className="grid grid-cols-2">
-                  <div className="p-6 border-r border-slate-50 dark:border-slate-800">
-                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">By Platform</h3>
-                    <div className="space-y-4">
-                      <a className="block text-sm font-medium hover:text-primary" href="#">Frontend (React/Next)</a>
-                      <a className="block text-sm font-medium hover:text-primary" href="#">Backend (Node/Python)</a>
-                      <a className="block text-sm font-medium hover:text-primary" href="#">Mobile (Flutter/iOS)</a>
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
                     </div>
                   </div>
                   <div className="p-6 bg-slate-50 dark:bg-slate-800/30">
                     <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Specialized</h3>
                     <div className="space-y-4">
-<<<<<<< HEAD
                       <Link className="block text-sm font-medium hover:text-primary" to="/hiredeveloper/fullstack">
                         <WavyText text="Full Stack Engineers" />
                       </Link>
@@ -546,32 +448,6 @@ export default function Navbar() {
             >
               <WavyText text="About Us" />
             </motion.button>
-=======
-                      <a className="block text-sm font-medium hover:text-primary" href="#">Full Stack Engineers</a>
-                      <a className="block text-sm font-medium hover:text-primary" href="#">AI/ML Specialists</a>
-                      <a className="block text-sm font-medium hover:text-primary" href="#">DevOps Architects</a>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              className="text-sm font-semibold text-slate-600 hover:text-primary"
-              href="#"
-            >
-              <WavyText text="About Us" />
-            </motion.a>
-
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              className="text-sm font-semibold text-slate-600 hover:text-primary"
-              href="#"
-            >
-              <WavyText text="Solution" />
-
-            </motion.a>
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
           </nav>
           <div className="flex items-center gap-4">
             <motion.button
@@ -580,10 +456,7 @@ export default function Navbar() {
                 boxShadow: "0px 10px 25px rgba(99,102,241,0.4)"
               }}
               whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
               onClick={() => navigate('/contactus')}
-=======
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
               className="hidden sm:flex bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-full shadow-lg"
             >
               <WavyText text="Contact Us" />
@@ -591,11 +464,7 @@ export default function Navbar() {
 
             <button className="lg:hidden p-2 text-slate-600">
               <span className="material-symbols-outlined">
-<<<<<<< HEAD
                 menu
-=======
-                <WavyText text="menu" />
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
               </span>
             </button>
           </div>

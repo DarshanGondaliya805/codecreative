@@ -1,13 +1,8 @@
 import { motion } from "framer-motion"
-<<<<<<< HEAD
 import { useNavigate } from "react-router-dom"
 
 export default function JoinTeam() {
   const navigate = useNavigate()
-=======
-
-export default function JoinTeam() {
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
 
   const container = {
     hidden: {},
@@ -69,10 +64,7 @@ export default function JoinTeam() {
             variants={item}
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
             onClick={()=>navigate('/career')}
-=======
->>>>>>> 1d95bc403ae8fdc4202ee5762638c3b30e53e32b
             className="group bg-white text-slate-900 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-primary hover:text-white transition-all shadow-2xl flex items-center gap-3 mx-auto"
           >
             Join Our Team
