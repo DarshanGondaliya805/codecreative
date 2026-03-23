@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Insights &amp; Intelligence | KINETIC</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary": "#5a1c00",
+                        "background": "#1c110b",
+                        "primary": "#ffb599",
+                        "surface-container-low": "#251913",
+                        "surface": "#1c110b",
+                        "on-secondary-container": "#ff9c74",
+                        "tertiary-fixed": "#d1e4ff",
+                        "on-secondary-fixed": "#370e00",
+                        "on-secondary": "#5a1c00",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#ffdbce",
+                        "secondary-fixed-dim": "#ffb599",
+                        "primary-fixed": "#ffdbce",
+                        "inverse-surface": "#f6ded3",
+                        "surface-container": "#291d17",
+                        "tertiary-container": "#1b95f1",
+                        "primary-container": "#f5611b",
+                        "secondary-container": "#783112",
+                        "on-background": "#f6ded3",
+                        "surface-variant": "#40322b",
+                        "surface-dim": "#1c110b",
+                        "inverse-on-surface": "#3b2d27",
+                        "on-primary-container": "#4f1700",
+                        "surface-container-lowest": "#160c07",
+                        "outline": "#a98a7f",
+                        "on-tertiary-fixed-variant": "#00497c",
+                        "on-primary-fixed": "#370e00",
+                        "surface-tint": "#ffb599",
+                        "on-secondary-fixed-variant": "#783112",
+                        "on-tertiary-container": "#002b4d",
+                        "surface-container-highest": "#40322b",
+                        "on-tertiary": "#003258",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#5a4138",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#7f2b00",
+                        "inverse-primary": "#a73a00",
+                        "primary-fixed-dim": "#ffb599",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#001d36",
+                        "on-surface": "#f6ded3",
+                        "surface-bright": "#45362f",
+                        "tertiary-fixed-dim": "#9ecaff",
+                        "tertiary": "#9ecaff",
+                        "secondary": "#ffb599",
+                        "on-surface-variant": "#e2bfb3",
+                        "surface-container-high": "#352720"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-effect {
+            background: rgba(64, 50, 43, 0.4);
+            backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 181, 153, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 w-full z-50 bg-[#1c110b]/80 backdrop-blur-md shadow-[0_32px_64px_rgba(34,22,16,0.06)]">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#ec5b13] font-headline">KINETIC</div>
+<div class="hidden md:flex gap-8 items-center font-['Space_Grotesk'] tracking-tight text-sm uppercase">
+<a class="text-white/70 hover:text-white transition-all duration-300 ease-out" href="#">Work</a>
+<a class="text-white/70 hover:text-white transition-all duration-300 ease-out" href="#">Services</a>
+<a class="text-[#ec5b13] border-b-2 border-[#ec5b13] pb-1" href="#">Insights</a>
+<a class="text-white/70 hover:text-white transition-all duration-300 ease-out" href="#">About</a>
+<a class="text-white/70 hover:text-white transition-all duration-300 ease-out" href="#">Careers</a>
+</div>
+<button class="bg-[#ec5b13] text-white px-6 py-2 rounded-lg font-headline font-bold text-sm uppercase tracking-wider transition-transform active:scale-95 hover:opacity-90">
+                Get in Touch
+            </button>
+</div>
+</nav>
+<main class="max-w-[1440px] mx-auto px-6 md:px-12 py-12 md:py-20">
+<!-- Hero Section -->
+<header class="mb-20 text-center md:text-left">
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-on-surface mb-6 leading-none">
+                OUR <span class="text-primary-container">BLOG</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
+                Insights, tips, and trends from the frontier of digital intelligence and engineered design.
+            </p>
+</header>
+<!-- Featured Post Section -->
+<section class="mb-24">
+<div class="group relative grid md:grid-cols-2 gap-0 overflow-hidden rounded-xl bg-surface-container-low shadow-2xl transition-all duration-500 hover:shadow-primary/5">
+<div class="relative h-[300px] md:h-full overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Abstract glowing neural network visualization in orange" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbhONy7V35CU8GBntPv90loWv0Zv9v_yf-qSauz-RkbiVH3I2NmeRn2I9GEBZFX3R7SUaD3AVdD6On9yh-neTqWd9znLvCHU2HnG1y5eskuAlS-lJlff3f4R_aNVdPXXYAVK1zQo93nOHqDSA6ITVQv7G4gR-5yNtKyAD2c87FZY2vG1qO6Vb3zOniZTjUm1C5nDJKka1LxSYrBjOMBLU_vGWw_kpj2vQZsIV1FphvEpIfGIp4ug3opICDMVRtjyhtWFRk9QGzGDI"/>
+<div class="absolute top-6 left-6 px-4 py-1.5 bg-primary-container text-white text-[10px] font-bold tracking-widest uppercase rounded-full">
+                        Featured Insight
+                    </div>
+</div>
+<div class="p-8 md:p-16 flex flex-col justify-center">
+<div class="flex items-center gap-4 text-xs font-label text-primary mb-6 uppercase tracking-widest">
+<span>AI &amp; Machine Learning</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>12 Min Read</span>
+</div>
+<h2 class="font-headline text-3xl md:text-5xl font-bold text-on-surface mb-6 leading-tight group-hover:text-primary transition-colors">
+                        The Neural Shift: How Generative Design is Rewriting UI Patterns.
+                    </h2>
+<p class="text-on-surface-variant text-lg mb-10 line-clamp-3 font-light leading-relaxed">
+                        Exploration of the convergence between human intuition and machine precision. We dive deep into the algorithms shaping the next decade of digital interfaces.
+                    </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high border border-outline-variant/30">
+<img alt="" class="w-full h-full object-cover" data-alt="Professional headshot of a male design lead" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLgCIDAL_I5GTEoDCVo836z_0dCRGbrj2tUuEtXXrMD9DcXI9X5OeQ61trRe066q8l8fr7lJ4bTp1V06tycwwWviAb6NrlbKdvq3ukfW5vCNjeTcUo6anE5i1SpriIwV-QPgmRgSVpHIR_Zkpud2Qospck5g7qXgM-Q44R7KI3u3VXq5ijj-YpR_zy5749zyb19hrSA7CfGZ0RXo3Jy6PUEIBqvTJD5irWLQNfzZcWVdHiRBjS06-4z8hAAqaZtHp92XDGa5mICVc"/>
+</div>
+<div>
+<div class="text-sm font-bold text-on-surface">Marcus Thorne</div>
+<div class="text-xs text-on-surface-variant">Head of R&amp;D • Oct 24, 2024</div>
+</div>
+</div>
+<a class="flex items-center gap-2 text-primary font-headline font-bold uppercase tracking-widest text-sm group/link" href="#">
+                            Read More 
+                            <span class="material-symbols-outlined text-lg transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<div class="flex flex-col lg:flex-row gap-16">
+<!-- Main Content Area -->
+<div class="flex-1">
+<!-- Filters and Sort -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
+<div class="flex flex-wrap gap-2">
+<button class="px-6 py-2.5 rounded-full bg-primary-container text-white text-xs font-bold uppercase tracking-wider">All</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-bold uppercase tracking-wider hover:bg-surface-container transition-colors">Development</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-bold uppercase tracking-wider hover:bg-surface-container transition-colors">UI/UX Design</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-bold uppercase tracking-wider hover:bg-surface-container transition-colors">AI/ML</button>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<select class="appearance-none bg-surface-container-low border-none text-on-surface text-xs font-bold uppercase tracking-widest px-6 py-2.5 pr-10 rounded-full focus:ring-1 focus:ring-primary-container/40">
+<option>Latest</option>
+<option>Popular</option>
+<option>Trending</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-sm opacity-50">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Blog Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Card 1 -->
+<article class="group bg-surface-container-low rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:translate-y-[-8px]">
+<div class="h-64 overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Futuristic high-tech computer hardware with orange lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9kdmL9_FzkDLymObCYLCJE8Q4JMsHtQ6UfHsVvm4pNAxfgNgBO3YWUSTqBgFWpq5mZHH7rogRdyHeDX6qYhFFqXcC5Gx2511UwMbcS-W-Z3Q60mfLLgXVDiyXAb63prUYxU8YimYaPrF7NgpYpX9nEEHAcIGlu0em4ZTskBYinYIoqL92qLZPUXojmux79RwFfebqf7Z0TxdGXGTj_PRGbAXQD8C9OlOlruzven1JqSsBz6vxehGgTIkQ46s6OFqGYx9Y9S43744"/>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<span class="text-[10px] font-black tracking-[0.2em] text-primary uppercase mb-4">DevOps</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4 leading-snug group-hover:text-primary transition-colors">
+                                Infrastructure as Fluid: Scaling with Kinetic Clouds.
+                            </h3>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed mb-8 flex-1">
+                                Moving beyond static servers to highly adaptive environments that respond to real-time traffic pulses.
+                            </p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="text-xs text-on-surface-variant">Elena Vance • 5 min read</span>
+<a class="text-primary text-xs font-bold uppercase tracking-widest" href="#">Read</a>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group bg-surface-container-low rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:translate-y-[-8px]">
+<div class="h-64 overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Minimalist design wireframes on a high-res screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7yDjlv9ca-BIzG6W4vCG50hbQR98Bta-Ru3Z1ewexyEI1WXZvNrAsoQ25uA2He-sFYJ-1sueQ7mdFOHUkRGz1To0rACbdZbXCJc2UWEDTgnJ3g78oJVYS5FhH31OYH8_tYY8be1FNLsDnUnUYTn1XhqYZliW0ALPlpbhEI4qR3odG764nV4S0gMF4RQzdZxUp5GOtCp-fxgM30m-C4jekiQYbWeGfAPJ1CJpQpTO27Lvr7RAIyADVAF9TIrNub4v7rRe8J99TktY"/>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<span class="text-[10px] font-black tracking-[0.2em] text-primary uppercase mb-4">UI/UX Design</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4 leading-snug group-hover:text-primary transition-colors">
+                                The Psychology of Micro-Interactions in SaaS.
+                            </h3>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed mb-8 flex-1">
+                                Why the smallest digital responses trigger the largest user retention gains.
+                            </p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="text-xs text-on-surface-variant">Sarah Chen • 8 min read</span>
+<a class="text-primary text-xs font-bold uppercase tracking-widest" href="#">Read</a>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group bg-surface-container-low rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:translate-y-[-8px]">
+<div class="h-64 overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Abstract data visualization with flowing orange lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJG8okztRnaNcX8tSnIbEh9gLFHdi5S4tbannL-ACJnAw0nBpo89Z9bGjmnkQUQ3X20cxBHZ4czmMxK5-dy8SjptcnkkAqKwcV7k8LwP68R-oHDqJMYbyagQqudF2ZWvJhg9EbOuosPuy-RXQqilncHWMbSUyG5X6DP5yeCr5LytcCCs-HN2xoQrPPjMNpZscfXcUOXAZsg-l1tAscImTHiKuJ87j6UGem4XFhXn6nBUyfsG9ebOASNojx41qA8KTVqEF3yfQ8yqY"/>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<span class="text-[10px] font-black tracking-[0.2em] text-primary uppercase mb-4">SEO &amp; Marketing</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4 leading-snug group-hover:text-primary transition-colors">
+                                Algorithm Proofing: Content in the AI Search Era.
+                            </h3>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed mb-8 flex-1">
+                                Strategies for maintaining visibility as search engines transition to answer engines.
+                            </p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="text-xs text-on-surface-variant">David K. • 10 min read</span>
+<a class="text-primary text-xs font-bold uppercase tracking-widest" href="#">Read</a>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="group bg-surface-container-low rounded-xl overflow-hidden flex flex-col transition-all duration-300 hover:translate-y-[-8px]">
+<div class="h-64 overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Digital matrix green and orange code strings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3lm5__4CRsvr_mqEn3H2FzANtKToR8Ov9q50e2bDNXQqgxRHk4LJ0_3IZwuuGDlQAuW19Ya4pGzNhjKUpqPtWRoubQVyL7GPIka96ibBHxVAIfqJkwaEm6UFBHqRfXJ20BbeRBMX9KvVroJ4gYUxV-6Eo7gsjoGGc9vdTXSkU5TFDhOmcHSv1gNlXWU2S8eBI9E8fexSA2XVMFdcAlwGgt7gJWQPrHc9Y7W5M0NhdrXyY2ZiJeEdugotVUqnNDl7RhPZ9NGgFuQw"/>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<span class="text-[10px] font-black tracking-[0.2em] text-primary uppercase mb-4">Development</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4 leading-snug group-hover:text-primary transition-colors">
+                                Rust vs Go: Choosing Your Engine for 2025.
+                            </h3>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed mb-8 flex-1">
+                                A performance-first breakdown of the industry's most robust backend languages.
+                            </p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="text-xs text-on-surface-variant">Julian Frost • 15 min read</span>
+<a class="text-primary text-xs font-bold uppercase tracking-widest" href="#">Read</a>
+</div>
+</div>
+</article>
+</div>
+<div class="mt-16 flex justify-center">
+<button class="px-12 py-4 rounded-xl border border-outline-variant/30 text-primary font-headline font-bold uppercase tracking-widest text-sm hover:bg-primary-container hover:text-white transition-all">
+                        Load More Insights
+                    </button>
+</div>
+</div>
+<!-- Sidebar -->
+<aside class="w-full lg:w-80 shrink-0 space-y-12">
+<!-- Search -->
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h4 class="font-headline font-bold text-sm uppercase tracking-widest mb-6">Search Knowledge</h4>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none rounded-lg py-3 px-4 text-sm focus:ring-1 focus:ring-primary-container/40" placeholder="Keywords..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary">search</span>
+</div>
+</div>
+<!-- Categories -->
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h4 class="font-headline font-bold text-sm uppercase tracking-widest mb-6">Taxonomy</h4>
+<ul class="space-y-4">
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="text-on-surface-variant text-sm group-hover:text-primary transition-colors">Engineering</span>
+<span class="text-[10px] font-bold bg-surface-container-highest px-2 py-0.5 rounded text-primary">14</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="text-on-surface-variant text-sm group-hover:text-primary transition-colors">Creative Strategy</span>
+<span class="text-[10px] font-bold bg-surface-container-highest px-2 py-0.5 rounded text-primary">09</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="text-on-surface-variant text-sm group-hover:text-primary transition-colors">AI Research</span>
+<span class="text-[10px] font-bold bg-surface-container-highest px-2 py-0.5 rounded text-primary">21</span>
+</li>
+<li class="flex justify-between items-center group cursor-pointer">
+<span class="text-on-surface-variant text-sm group-hover:text-primary transition-colors">Culture</span>
+<span class="text-[10px] font-bold bg-surface-container-highest px-2 py-0.5 rounded text-primary">05</span>
+</li>
+</ul>
+</div>
+<!-- Popular Tags -->
+<div>
+<h4 class="font-headline font-bold text-sm uppercase tracking-widest mb-6 ml-1">Popular Nodes</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-surface-container-highest/40 rounded-full text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant hover:text-primary cursor-pointer transition-colors">#web3</span>
+<span class="px-4 py-1.5 bg-surface-container-highest/40 rounded-full text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant hover:text-primary cursor-pointer transition-colors">#future_ui</span>
+<span class="px-4 py-1.5 bg-surface-container-highest/40 rounded-full text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant hover:text-primary cursor-pointer transition-colors">#ethics_ai</span>
+<span class="px-4 py-1.5 bg-surface-container-highest/40 rounded-full text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant hover:text-primary cursor-pointer transition-colors">#react_v19</span>
+<span class="px-4 py-1.5 bg-surface-container-highest/40 rounded-full text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant hover:text-primary cursor-pointer transition-colors">#hyper_growth</span>
+</div>
+</div>
+<!-- Newsletter -->
+<div class="relative overflow-hidden bg-primary-container rounded-xl p-8">
+<div class="relative z-10">
+<h4 class="font-headline font-bold text-xl text-white mb-4 leading-tight">Sync Your Neural Feed</h4>
+<p class="text-white/80 text-sm mb-6 font-light">Get engineered insights delivered weekly. No noise, just signals.</p>
+<form class="space-y-3">
+<input class="w-full bg-white/10 border-white/20 rounded-lg py-3 px-4 text-sm text-white placeholder:text-white/40 focus:ring-0" placeholder="email@kinetic.io" type="email"/>
+<button class="w-full bg-white text-primary-container font-headline font-black py-3 rounded-lg text-xs uppercase tracking-[0.2em] shadow-lg shadow-black/10">Subscribe</button>
+</form>
+</div>
+<!-- Decorative Circle -->
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Bottom CTA Section -->
+<section class="max-w-[1440px] mx-auto px-12 pb-24">
+<div class="bg-surface-container py-20 px-12 rounded-2xl flex flex-col items-center text-center">
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-6">Need Help With Your Project?</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl mb-12 font-light">Our engineering team is ready to help you build the future of your digital ecosystem.</p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-primary-container text-white px-10 py-4 rounded-xl font-headline font-bold uppercase tracking-widest text-sm hover:scale-105 transition-transform">Hire Experts</button>
+<button class="glass-effect text-on-surface px-10 py-4 rounded-xl font-headline font-bold uppercase tracking-widest text-sm hover:bg-surface-container-high transition-all">Contact Us</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#1c110b] w-full border-t-[0.5px] border-[#ffb599]/20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 px-12 py-24 max-w-[1440px] mx-auto">
+<div>
+<div class="text-xl font-black text-[#ec5b13] mb-8 font-headline">KINETIC</div>
+<p class="text-white/40 font-body text-sm max-w-sm leading-relaxed">
+                    Engineering intelligence for the digital elite. We design systems that breathe, move, and evolve.
+                </p>
+</div>
+<div class="flex flex-col md:items-end justify-between gap-12">
+<nav class="flex flex-wrap gap-8 font-['Inter'] text-xs tracking-widest uppercase">
+<a class="text-white/40 hover:text-[#ec5b13] hover:translate-x-1 transition-all" href="#">Privacy</a>
+<a class="text-white/40 hover:text-[#ec5b13] hover:translate-x-1 transition-all" href="#">Terms</a>
+<a class="text-white/40 hover:text-[#ec5b13] hover:translate-x-1 transition-all" href="#">LinkedIn</a>
+<a class="text-white/40 hover:text-[#ec5b13] hover:translate-x-1 transition-all" href="#">Instagram</a>
+</nav>
+<p class="text-white/40 font-['Inter'] text-[10px] tracking-widest uppercase">
+                    © 2024 KINETIC AGENCY. ENGINEERED FOR INTELLIGENCE.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

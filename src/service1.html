@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Services | DevCurator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "outline-variant": "#c1c6d5",
+                "outline": "#727784",
+                "inverse-primary": "#aac7ff",
+                "on-error": "#ffffff",
+                "inverse-on-surface": "#f3f0f2",
+                "surface-container-high": "#eae7ea",
+                "primary-fixed-dim": "#aac7ff",
+                "tertiary": "#883700",
+                "on-primary-fixed-variant": "#00458e",
+                "surface-container-highest": "#e4e2e4",
+                "surface-container": "#f0edef",
+                "surface-tint": "#005cba",
+                "surface": "#fcf8fb",
+                "on-secondary-fixed-variant": "#46464b",
+                "primary": "#004e9f",
+                "on-error-container": "#93000a",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed-variant": "#793000",
+                "error": "#ba1a1a",
+                "primary-container": "#0066cc",
+                "on-tertiary-fixed": "#341100",
+                "on-background": "#1b1b1d",
+                "on-secondary-fixed": "#1a1b1f",
+                "on-surface": "#1b1b1d",
+                "secondary-fixed-dim": "#c7c6cb",
+                "error-container": "#ffdad6",
+                "on-primary-container": "#dfe8ff",
+                "secondary-container": "#e0dfe4",
+                "on-surface-variant": "#414753",
+                "secondary": "#5e5e63",
+                "tertiary-fixed-dim": "#ffb692",
+                "on-secondary-container": "#626267",
+                "inverse-surface": "#303032",
+                "on-tertiary-container": "#ffe3d6",
+                "on-primary-fixed": "#001b3e",
+                "tertiary-fixed": "#ffdbcb",
+                "on-secondary": "#ffffff",
+                "on-primary": "#ffffff",
+                "surface-bright": "#fcf8fb",
+                "surface-variant": "#e4e2e4",
+                "primary-fixed": "#d7e3ff",
+                "tertiary-container": "#af4900",
+                "surface-container-low": "#f6f3f5",
+                "secondary-fixed": "#e3e2e7",
+                "surface-dim": "#dcd9dc",
+                "background": "#fcf8fb",
+                "on-tertiary": "#ffffff"
+              },
+              fontFamily: {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card:hover {
+            box-shadow: 0 20px 40px -15px rgba(0, 78, 159, 0.1);
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm shadow-blue-900/5 transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto relative">
+<div class="text-xl font-bold tracking-tighter text-slate-900 dark:text-white flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white text-sm">D</span>
+                DevCurator
+            </div>
+<div class="hidden md:flex items-center gap-8 font-['Inter'] font-medium tracking-tight text-sm">
+<a class="text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600 pb-1" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Process</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Portfolio</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-semibold text-sm hover:opacity-90 active:scale-95 transition-all duration-150">
+                Get a Quote
+            </button>
+<div class="bg-slate-100/50 dark:bg-slate-800/50 h-[1px] w-full absolute bottom-0 left-0"></div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-48 pb-32 px-8 overflow-hidden">
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(45%_45%_at_50%_50%,#d7e3ff_0%,#fcf8fb_100%)] opacity-40"></div>
+<div class="max-w-4xl mx-auto text-center">
+<span class="inline-block py-1 px-4 bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold tracking-widest uppercase rounded-full mb-6">Expertise &amp; Innovation</span>
+<h1 class="text-6xl md:text-7xl font-extrabold text-on-surface tracking-tight leading-[1.1] mb-8">
+                Our Services
+            </h1>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto mb-12">
+                We build scalable, modern digital solutions tailored to your business, blending technical precision with human-centric design.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all duration-300">
+                    Start Your Project
+                </button>
+<button class="text-primary font-bold px-8 py-4 rounded-xl hover:bg-primary-fixed/20 transition-all duration-300">
+                    View Portfolio
+                </button>
+</div>
+</div>
+</header>
+<!-- Services Grid -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Web Dev -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-xl transition-all duration-500 hover:scale-[1.03] border border-transparent hover:border-primary/10">
+<div class="w-12 h-12 bg-primary-fixed text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">Web Development</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">High-performance React and Next.js applications built for speed and SEO.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+<!-- Mobile App -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-xl transition-all duration-500 hover:scale-[1.03] border border-transparent hover:border-primary/10">
+<div class="w-12 h-12 bg-primary-fixed text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="smartphone">smartphone</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">Mobile App Development</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Native and cross-platform apps that deliver seamless user experiences.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+<!-- Cloud -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-xl transition-all duration-500 hover:scale-[1.03] border border-transparent hover:border-primary/10">
+<div class="w-12 h-12 bg-primary-fixed text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="cloud">cloud</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">Cloud Development</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Scalable AWS/Azure infrastructure for modern distributed systems.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+<!-- AI/ML -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-xl transition-all duration-500 hover:scale-[1.03] border border-transparent hover:border-primary/10">
+<div class="w-12 h-12 bg-primary-fixed text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">AI/ML Development</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Intelligent automation and predictive models to drive business growth.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+<!-- E-commerce -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-xl transition-all duration-500 hover:scale-[1.03] border border-transparent hover:border-primary/10">
+<div class="w-12 h-12 bg-primary-fixed text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">E-commerce Solutions</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Scalable shopping platforms with integrated payment systems.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+<!-- UI/UX -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-xl transition-all duration-500 hover:scale-[1.03] border border-transparent hover:border-primary/10">
+<div class="w-12 h-12 bg-primary-fixed text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">UI/UX Design</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">User-centric interfaces designed for clarity and deep engagement.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+<!-- QA -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-xl transition-all duration-500 hover:scale-[1.03] border border-transparent hover:border-primary/10">
+<div class="w-12 h-12 bg-primary-fixed text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">QA &amp; Automation</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Comprehensive testing to ensure your product is bug-free and robust.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+<!-- API -->
+<div class="service-card group bg-surface-container-lowest p-8 rounded-xl transition-all duration-500 hover:scale-[1.03] border border-transparent hover:border-primary/10">
+<div class="w-12 h-12 bg-primary-fixed text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">API &amp; Microservices</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Interconnected architectures designed for massive scale.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Overview -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-extrabold text-on-surface tracking-tight mb-4">Our Method</h2>
+<p class="text-on-surface-variant">How we turn your vision into a digital reality.</p>
+</div>
+<div class="flex flex-col lg:flex-row justify-between items-start gap-12 relative">
+<!-- Progress Line -->
+<div class="hidden lg:block absolute top-10 left-0 w-full h-0.5 bg-surface-container-high z-0"></div>
+<div class="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
+<div class="w-12 h-12 bg-white rounded-full border-4 border-primary flex items-center justify-center font-bold text-primary mb-6 shadow-sm">1</div>
+<h4 class="font-bold text-lg mb-2">Discover</h4>
+<p class="text-sm text-on-surface-variant">We dive deep into your requirements and goals.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
+<div class="w-12 h-12 bg-white rounded-full border-4 border-primary flex items-center justify-center font-bold text-primary mb-6 shadow-sm">2</div>
+<h4 class="font-bold text-lg mb-2">Plan</h4>
+<p class="text-sm text-on-surface-variant">Architecture mapping and roadmap definition.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
+<div class="w-12 h-12 bg-white rounded-full border-4 border-primary flex items-center justify-center font-bold text-primary mb-6 shadow-sm">3</div>
+<h4 class="font-bold text-lg mb-2">Build</h4>
+<p class="text-sm text-on-surface-variant">Agile development with transparent progress updates.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
+<div class="w-12 h-12 bg-white rounded-full border-4 border-primary flex items-center justify-center font-bold text-primary mb-6 shadow-sm">4</div>
+<h4 class="font-bold text-lg mb-2">Launch</h4>
+<p class="text-sm text-on-surface-variant">Deployment to production with zero downtime.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
+<div class="w-12 h-12 bg-white rounded-full border-4 border-primary flex items-center justify-center font-bold text-primary mb-6 shadow-sm">5</div>
+<h4 class="font-bold text-lg mb-2">Support</h4>
+<p class="text-sm text-on-surface-variant">Ongoing optimization and 24/7 monitoring.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-24 px-8 bg-surface-container">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="space-y-4">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h5 class="text-lg font-bold">Scalable solutions</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Infrastructure that grows alongside your business needs without friction.</p>
+</div>
+<div class="space-y-4">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<h5 class="text-lg font-bold">Modern technologies</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Leveraging the latest stacks for peak performance and maintainability.</p>
+</div>
+<div class="space-y-4">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="architecture">architecture</span>
+</div>
+<h5 class="text-lg font-bold">Clean architecture</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Robust codebases designed for longevity and easy future modifications.</p>
+</div>
+<div class="space-y-4">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="support_agent">support_agent</span>
+</div>
+<h5 class="text-lg font-bold">Reliable support</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Expert team available to ensure your digital assets run flawlessly.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Presence -->
+<section class="py-20 px-8 text-center bg-surface overflow-hidden">
+<div class="max-w-4xl mx-auto">
+<p class="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-8">Global Scale</p>
+<h2 class="text-2xl font-bold mb-12">Serving clients across multiple countries</h2>
+<div class="flex flex-wrap justify-center items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full border border-outline-variant/10">
+<img alt="USA" class="w-6 h-4 object-cover rounded-sm" data-alt="United States Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvyeTwzM0KA94AqWyjyQEngfhyhkDWNC8Kkf3YJ9ZwkOyYbbQKsqcamhMDuOfO3kCaLHGd5Vw7ZWJY86am0CiAfPr6Pkfoj7HS7Wa6aYOAMy9gqhQuHv914ju-g2Mxyq9UzJo4NY2en3dki0n6cbOGHBiOQVjaRczPaAMHcsSiwUOJ5W069KG5sptdXlqu7ZapY8XRiwlj1mbNJioIOiNce5Qi_NJ4XsRAyZfxL9YSdlREXmsavlENVWo3oV36vj0r84tPUdSsYNU"/>
+<span class="text-xs font-semibold">United States</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full border border-outline-variant/10">
+<img alt="UK" class="w-6 h-4 object-cover rounded-sm" data-alt="United Kingdom Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvyeTwzM0KA94AqWyjyQEngfhyhkDWNC8Kkf3YJ9ZwkOyYbbQKsqcamhMDuOfO3kCaLHGd5Vw7ZWJY86am0CiAfPr6Pkfoj7HS7Wa6aYOAMy9gqhQuHv914ju-g2Mxyq9UzJo4NY2en3dki0n6cbOGHBiOQVjaRczPaAMHcsSiwUOJ5W069KG5sptdXlqu7ZapY8XRiwlj1mbNJioIOiNce5Qi_NJ4XsRAyZfxL9YSdlREXmsavlENVWo3oV36vj0r84tPUdSsYNU"/>
+<span class="text-xs font-semibold">United Kingdom</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full border border-outline-variant/10">
+<img alt="Germany" class="w-6 h-4 object-cover rounded-sm" data-alt="Germany Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvyeTwzM0KA94AqWyjyQEngfhyhkDWNC8Kkf3YJ9ZwkOyYbbQKsqcamhMDuOfO3kCaLHGd5Vw7ZWJY86am0CiAfPr6Pkfoj7HS7Wa6aYOAMy9gqhQuHv914ju-g2Mxyq9UzJo4NY2en3dki0n6cbOGHBiOQVjaRczPaAMHcsSiwUOJ5W069KG5sptdXlqu7ZapY8XRiwlj1mbNJioIOiNce5Qi_NJ4XsRAyZfxL9YSdlREXmsavlENVWo3oV36vj0r84tPUdSsYNU"/>
+<span class="text-xs font-semibold">Germany</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full border border-outline-variant/10">
+<img alt="India" class="w-6 h-4 object-cover rounded-sm" data-alt="India Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvyeTwzM0KA94AqWyjyQEngfhyhkDWNC8Kkf3YJ9ZwkOyYbbQKsqcamhMDuOfO3kCaLHGd5Vw7ZWJY86am0CiAfPr6Pkfoj7HS7Wa6aYOAMy9gqhQuHv914ju-g2Mxyq9UzJo4NY2en3dki0n6cbOGHBiOQVjaRczPaAMHcsSiwUOJ5W069KG5sptdXlqu7ZapY8XRiwlj1mbNJioIOiNce5Qi_NJ4XsRAyZfxL9YSdlREXmsavlENVWo3oV36vj0r84tPUdSsYNU"/>
+<span class="text-xs font-semibold">India</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full border border-outline-variant/10">
+<img alt="Singapore" class="w-6 h-4 object-cover rounded-sm" data-alt="Singapore Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvyeTwzM0KA94AqWyjyQEngfhyhkDWNC8Kkf3YJ9ZwkOyYbbQKsqcamhMDuOfO3kCaLHGd5Vw7ZWJY86am0CiAfPr6Pkfoj7HS7Wa6aYOAMy9gqhQuHv914ju-g2Mxyq9UzJo4NY2en3dki0n6cbOGHBiOQVjaRczPaAMHcsSiwUOJ5W069KG5sptdXlqu7ZapY8XRiwlj1mbNJioIOiNce5Qi_NJ4XsRAyZfxL9YSdlREXmsavlENVWo3oV36vj0r84tPUdSsYNU"/>
+<span class="text-xs font-semibold">Singapore</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full border border-outline-variant/10">
+<img alt="Canada" class="w-6 h-4 object-cover rounded-sm" data-alt="Canada Flag" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvyeTwzM0KA94AqWyjyQEngfhyhkDWNC8Kkf3YJ9ZwkOyYbbQKsqcamhMDuOfO3kCaLHGd5Vw7ZWJY86am0CiAfPr6Pkfoj7HS7Wa6aYOAMy9gqhQuHv914ju-g2Mxyq9UzJo4NY2en3dki0n6cbOGHBiOQVjaRczPaAMHcsSiwUOJ5W069KG5sptdXlqu7ZapY8XRiwlj1mbNJioIOiNce5Qi_NJ4XsRAyZfxL9YSdlREXmsavlENVWo3oV36vj0r84tPUdSsYNU"/>
+<span class="text-xs font-semibold">Canada</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-8">
+<div class="max-w-5xl mx-auto bg-gradient-to-br from-primary to-primary-container rounded-[2rem] p-16 text-center text-white relative overflow-hidden shadow-2xl shadow-primary/30">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 relative z-10">
+                Let’s build something meaningful together
+            </h2>
+<p class="text-on-primary-container/80 text-lg mb-12 max-w-xl mx-auto relative z-10">
+                Ready to take your business to the next level? Our team of curators is ready to design and engineer your vision.
+            </p>
+<button class="bg-white text-primary px-10 py-5 rounded-xl font-bold text-lg hover:bg-primary-fixed hover:scale-105 active:scale-95 transition-all duration-300 relative z-10">
+                Contact Us
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 font-['Inter']">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-bold text-slate-900 dark:text-white mb-2 text-xl tracking-tighter">DevCurator</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">© 2024 DevCurator. Precision in Code.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 hover:text-blue-600 transition-colors hover:underline decoration-2 underline-offset-4 text-sm" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-blue-600 transition-colors hover:underline decoration-2 underline-offset-4 text-sm" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-blue-600 transition-colors hover:underline decoration-2 underline-offset-4 text-sm" href="#">Cookie Settings</a>
+<a class="text-slate-500 hover:text-blue-600 transition-colors hover:underline decoration-2 underline-offset-4 text-sm" href="#">Global Offices</a>
+</div>
+</div>
+</footer>
+</body></html>

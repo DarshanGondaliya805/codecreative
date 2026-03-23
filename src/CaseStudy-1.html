@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Study: Taxi Booking App | Code Creative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "tertiary-fixed": "#d1e4ff",
+                "inverse-on-surface": "#3b2d27",
+                "secondary-fixed": "#ffdbce",
+                "tertiary-container": "#1b95f1",
+                "surface-container-lowest": "#160c07",
+                "on-error-container": "#ffdad6",
+                "error": "#ffb4ab",
+                "on-surface-variant": "#e2bfb3",
+                "on-secondary-container": "#ff9c74",
+                "surface-container-low": "#251913",
+                "surface": "#1c110b",
+                "on-secondary-fixed": "#370e00",
+                "inverse-primary": "#a73a00",
+                "surface-container-highest": "#40322b",
+                "secondary-container": "#783112",
+                "outline": "#a98a7f",
+                "on-error": "#690005",
+                "on-secondary": "#5a1c00",
+                "inverse-surface": "#f6ded3",
+                "surface-container-high": "#352720",
+                "on-tertiary-fixed": "#001d36",
+                "primary-fixed": "#ffdbce",
+                "on-primary-container": "#4f1700",
+                "surface-container": "#291d17",
+                "on-background": "#f6ded3",
+                "on-primary": "#5a1c00",
+                "surface-variant": "#40322b",
+                "secondary": "#ffb599",
+                "primary-fixed-dim": "#ffb599",
+                "outline-variant": "#5a4138",
+                "on-primary-fixed": "#370e00",
+                "secondary-fixed-dim": "#ffb599",
+                "on-tertiary-fixed-variant": "#00497c",
+                "on-secondary-fixed-variant": "#783112",
+                "surface-bright": "#45362f",
+                "primary": "#ffb599",
+                "error-container": "#93000a",
+                "surface-tint": "#ffb599",
+                "on-tertiary-container": "#002b4d",
+                "tertiary-fixed-dim": "#9ecaff",
+                "primary-container": "#f5611b",
+                "surface-dim": "#1c110b",
+                "on-tertiary": "#003258",
+                "tertiary": "#9ecaff",
+                "on-surface": "#f6ded3",
+                "on-primary-fixed-variant": "#7f2b00",
+                "background": "#1c110b"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(64, 50, 43, 0.4); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 181, 153, 0.2); }
+        .text-gradient { background: linear-gradient(135deg, #ffb599 0%, #f5611b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-900/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-stone-100 font-headline">Code Creative</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-stone-400 hover:text-stone-100 transition-colors duration-300 ease-in-out hover:scale-105 font-['Space_Grotesk'] tracking-tight" href="#">Home</a>
+<a class="text-stone-400 hover:text-stone-100 transition-colors duration-300 ease-in-out hover:scale-105 font-['Space_Grotesk'] tracking-tight" href="#">Services</a>
+<a class="text-orange-500 font-semibold border-b-2 border-orange-500 pb-1 font-['Space_Grotesk'] tracking-tight" href="#">Portfolio</a>
+<a class="text-stone-400 hover:text-stone-100 transition-colors duration-300 ease-in-out hover:scale-105 font-['Space_Grotesk'] tracking-tight" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(245,97,27,0.4)]">Get Started</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden px-8">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#f5611b15,transparent_70%)]"></div>
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-6">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-secondary text-sm font-medium">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        Mobile App
+                    </span>
+<h1 class="text-6xl md:text-8xl font-headline font-bold tracking-tighter leading-none">
+                        Taxi <br/> <span class="text-gradient">Booking App</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-lg leading-relaxed">
+                        A next-generation urban mobility solution designed for seamless ride-hailing, real-time fleet management, and secure passenger experiences.
+                    </p>
+<div class="flex gap-4">
+<button class="px-8 py-4 bg-primary-container text-on-primary-container rounded-xl font-bold transition-all hover:scale-105">View Live Project</button>
+<button class="px-8 py-4 glass-card rounded-xl font-bold transition-all hover:bg-surface-container-high">The Brief</button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full group-hover:bg-primary/30 transition-all duration-700"></div>
+<img alt="App interface mockup" class="relative rounded-3xl shadow-2xl transition-transform duration-700 group-hover:scale-[1.02] border border-outline-variant/30" data-alt="Smartphone showing modern dark taxi app interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoA4BugtOrni0E91eqcLExZ-WJMQ9ll7cpX5q6sYnLjUnFDEtx7QZXcY13CznnMtlMY8iJJgayMmiOV9TeVoCDQfGs2_DPhEmeWnVsuZBf_iTkMhfGSqj2lW0Es6_U9GEZsz3Cfsot4JX7aiAv-L1Xu66oIKc_ic4IwwIyBd6dwVVeX0NmmEgyZsrIe9On44OglfGyUZao-N3WkpYzINLan4KgHs640-1QOugd-WrxgLcRyLzTeAqztQXG2Nz4nMW-6U1K30tPc2U"/>
+</div>
+</div>
+</section>
+<!-- Project Overview -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+<div class="space-y-4">
+<h2 class="text-sm font-bold uppercase tracking-widest text-primary">The Problem</h2>
+<p class="text-3xl font-headline font-medium leading-snug">Fragmented ride services and outdated real-time tracking left users frustrated and drivers inefficient.</p>
+<p class="text-on-surface-variant leading-relaxed">Existing applications suffered from high latency in GPS updates, lack of localized payment support, and unintuitive user flows that led to high churn rates during peak hours.</p>
+</div>
+<div class="space-y-4">
+<h2 class="text-sm font-bold uppercase tracking-widest text-tertiary">The Solution</h2>
+<p class="text-3xl font-headline font-medium leading-snug">An integrated ecosystem focusing on low-latency synchronization and predictive dispatching.</p>
+<p class="text-on-surface-variant leading-relaxed">We engineered a bespoke backend architecture that reduced latency to sub-200ms, implemented a bi-directional real-time communication layer, and a friction-free UI designed for one-handed operation.</p>
+</div>
+</div>
+</section>
+<!-- Key Features Grid -->
+<section class="py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-4xl font-headline font-bold mb-4">Core Intelligence</h2>
+<p class="text-on-surface-variant max-w-xl">Deeply integrated features that define the premium ride experience.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-card p-8 rounded-3xl space-y-6 hover:translate-y-[-8px] transition-all duration-500">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<h3 class="text-xl font-bold">Real-time Tracking</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Proprietary GPS polling algorithms ensure driver locations are updated with pin-point accuracy every second.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl space-y-6 hover:translate-y-[-8px] transition-all duration-500">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="shield" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<h3 class="text-xl font-bold">Secure Payments</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">PCI-DSS compliant multi-gateway integration supporting crypto, credit cards, and local digital wallets.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl space-y-6 hover:translate-y-[-8px] transition-all duration-500">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<h3 class="text-xl font-bold">AI Dispatching</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Neural networks predict high-demand areas to pre-position drivers, reducing wait times by 35%.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack -->
+<section class="py-16 px-8 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Engineered With</span>
+<div class="flex flex-wrap justify-center gap-4">
+<span class="px-6 py-2 rounded-full bg-surface-container-high border border-outline-variant/20 text-on-surface text-sm font-medium">React Native</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-high border border-outline-variant/20 text-on-surface text-sm font-medium">Node.js</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-high border border-outline-variant/20 text-on-surface text-sm font-medium">AWS Lambda</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-high border border-outline-variant/20 text-on-surface text-sm font-medium">MongoDB Atlas</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-high border border-outline-variant/20 text-on-surface text-sm font-medium">Redis</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-high border border-outline-variant/20 text-on-surface text-sm font-medium">Google Maps API</span>
+</div>
+</div>
+</section>
+<!-- Results & Impact -->
+<section class="py-24 px-8 bg-primary-container/5">
+<div class="max-w-7xl mx-auto text-center space-y-16">
+<h2 class="text-4xl font-headline font-bold">The Impact</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-2">
+<div class="text-5xl font-bold text-primary font-headline">40%</div>
+<p class="text-on-surface-variant text-sm">Faster Performance</p>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-bold text-primary font-headline">2M+</div>
+<p class="text-on-surface-variant text-sm">Active Users</p>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-bold text-primary font-headline">4.9/5</div>
+<p class="text-on-surface-variant text-sm">App Store Rating</p>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-bold text-primary font-headline">12s</div>
+<p class="text-on-surface-variant text-sm">Avg. Match Time</p>
+</div>
+</div>
+</div>
+</section>
+<!-- UI Gallery -->
+<section class="py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<h2 class="text-4xl font-headline font-bold">The Interface</h2>
+<p class="text-on-surface-variant mt-2">A clean, functional design language.</p>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="rounded-3xl overflow-hidden aspect-[9/16] bg-surface-container">
+<img alt="Booking screen" class="w-full h-full object-cover" data-alt="Close up of mobile taxi app booking interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx6D7yRxtOE3bRbbKg6FyVoc--SFeukglhb6bq9dY-tXQZslqRTBRWgf4QKccVNZVrpapQKwTvrCupq6A3OfNtSAt9hQh0jDTi6n_FOyiCPwgpF7_Z9b7k1PJXAw-L_00G6MpnWTpVgy3D1YBARKbekN0r0-_1MKzs0seHl1ux9ilDnQ0AWGjT37ZTyB_FOJk2SktqqhzHDB7gOnFIcWWBxrQEmkc6_nT9q2PZIr1acfS4C4ukLB4Ei308HKouZmaCwVTS1nh1b1Q"/>
+</div>
+<div class="rounded-3xl overflow-hidden aspect-[9/16] bg-surface-container mt-12">
+<img alt="Tracking screen" class="w-full h-full object-cover" data-alt="Smartphone showing map with taxi tracking path" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc8lasIKWQnEet2L4hYmS9hwJ7aRDm-Tf_QN50DGRez20lt2LQCfFrBGW9P-cZ4djb7m0uYVAwtwA9yVEYYGrf-xTmGZDWrnN3zZo5jPZ-pSiWRVmEV11ktDqUc0HMg1ym5fQN3QemhS2MQYo8dRjANwMUOr2__yZhO2fVvn3bCPAU6p4VgLqtg735AZOwTk5iIR8kBdvn5z2I0qhL_MU56zThrynq2GeFTTYO0NTtuxuB7qasFGzdVAyh1dr9Zlk0Moepm9j_FGA"/>
+</div>
+<div class="rounded-3xl overflow-hidden aspect-[9/16] bg-surface-container mt-24">
+<img alt="Payment screen" class="w-full h-full object-cover" data-alt="Secure digital payment interface on mobile device" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC6IYd5iMcNs0ulFH5ae3RrvTbiqmijZmgoUU5pt9korlj2IJmAaikUfZpd94_TRhrerID7fpIhhGxZRgcnzyZbYuVWoAPUQRuAZyU8HqpaBpyzgtL8Bc3A_mC4AaI3t0Cll200Pt-wvTfdgyys9pu1tncoFilTWkRJXXDWo91nPSKqE2wKVUZPyYQ1cRvpM50LrlnWBLSCyIRWXxw-Q4HJSQ6sbSZstNJ7IZDWjo4eUSxmq6u9BzUe2HAnncEMXjcPJSHOr2XTR4"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Development Process -->
+<section class="py-24 px-8 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-4xl font-headline font-bold mb-20 text-center">Architectural Journey</h2>
+<div class="relative">
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant/20 -translate-y-1/2 hidden md:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-12 relative z-10">
+<div class="flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary font-bold text-xl border border-primary/20">01</div>
+<h4 class="font-bold">Research</h4>
+<p class="text-xs text-on-surface-variant">Market analysis &amp; user persona mapping.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary font-bold text-xl border border-primary/20">02</div>
+<h4 class="font-bold">Design</h4>
+<p class="text-xs text-on-surface-variant">Wireframing &amp; interactive high-fi prototyping.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary font-bold text-xl border border-primary/20">03</div>
+<h4 class="font-bold">Dev</h4>
+<p class="text-xs text-on-surface-variant">Agile sprints &amp; modular architecture building.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary font-bold text-xl border border-primary/20">04</div>
+<h4 class="font-bold">Test</h4>
+<p class="text-xs text-on-surface-variant">Beta testing &amp; rigorous security auditing.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-4">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary font-bold text-xl border border-primary/20">05</div>
+<h4 class="font-bold">Deploy</h4>
+<p class="text-xs text-on-surface-variant">CI/CD automation &amp; global rollout.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Challenges & Solutions -->
+<section class="py-24 px-8">
+<div class="max-w-5xl mx-auto space-y-12">
+<h2 class="text-4xl font-headline font-bold">Overcoming Hurdles</h2>
+<div class="space-y-8">
+<div class="p-10 rounded-3xl bg-surface-container border-l-4 border-primary">
+<h4 class="text-xl font-bold mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">warning</span>
+                            Challenge: Battery Optimization
+                        </h4>
+<p class="text-on-surface-variant leading-relaxed">Continuous GPS tracking was draining driver device batteries in less than 4 hours.</p>
+<div class="mt-6 pt-6 border-t border-outline-variant/20">
+<h5 class="font-bold text-sm uppercase text-primary mb-2">The Engineering Solution</h5>
+<p class="text-on-surface leading-relaxed">We implemented geofencing-based polling rates—decreasing frequency when stationary and increasing during active trips, resulting in a 60% reduction in battery consumption.</p>
+</div>
+</div>
+<div class="p-10 rounded-3xl bg-surface-container border-l-4 border-tertiary">
+<h4 class="text-xl font-bold mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">bolt</span>
+                            Challenge: Surge Pricing Latency
+                        </h4>
+<p class="text-on-surface-variant leading-relaxed">Dynamic pricing calculations were lagging, causing price mismatches between request and confirmation.</p>
+<div class="mt-6 pt-6 border-t border-outline-variant/20">
+<h5 class="font-bold text-sm uppercase text-tertiary mb-2">The Engineering Solution</h5>
+<p class="text-on-surface leading-relaxed">Shifted logic to the edge via AWS Lambda@Edge, caching heat-map data locally to provide instant, immutable quotes during the 60-second booking window.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Offices -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline font-bold">Global Presence</h2>
+<p class="text-on-surface-variant mt-2">Available wherever you need innovation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="glass-card p-6 rounded-2xl">
+<h4 class="text-lg font-bold mb-2">Surat</h4>
+<p class="text-sm text-on-surface-variant mb-4">Innovation Hub, IT Park</p>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">GET DIRECTIONS <span class="material-symbols-outlined text-sm">north_east</span></a>
+</div>
+<div class="glass-card p-6 rounded-2xl">
+<h4 class="text-lg font-bold mb-2">Mumbai</h4>
+<p class="text-sm text-on-surface-variant mb-4">BKC FinTech Center</p>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">GET DIRECTIONS <span class="material-symbols-outlined text-sm">north_east</span></a>
+</div>
+<div class="glass-card p-6 rounded-2xl">
+<h4 class="text-lg font-bold mb-2">Dubai</h4>
+<p class="text-sm text-on-surface-variant mb-4">DIFC Innovation Ave</p>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">GET DIRECTIONS <span class="material-symbols-outlined text-sm">north_east</span></a>
+</div>
+<div class="glass-card p-6 rounded-2xl">
+<h4 class="text-lg font-bold mb-2">London</h4>
+<p class="text-sm text-on-surface-variant mb-4">Silicon Roundabout</p>
+<a class="text-primary text-xs font-bold flex items-center gap-1" href="#">GET DIRECTIONS <span class="material-symbols-outlined text-sm">north_east</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Contact Section -->
+<section class="py-24 px-8">
+<div class="max-w-5xl mx-auto rounded-3xl bg-gradient-to-br from-surface-container-highest to-surface overflow-hidden relative shadow-2xl">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+<div class="grid grid-cols-1 md:grid-cols-2">
+<div class="p-12 space-y-6">
+<h2 class="text-4xl font-headline font-bold">Start Your Project</h2>
+<p class="text-on-surface-variant">Ready to transform your industry with a bespoke digital solution? Let's build the future together.</p>
+<div class="space-y-4 pt-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span>hello@codecreative.io</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>+1 (555) 000-0000</span>
+</div>
+</div>
+</div>
+<div class="p-12 glass-card">
+<form class="space-y-4">
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 placeholder:text-outline/40" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Email</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 placeholder:text-outline/40" placeholder="john@example.com" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Message</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 placeholder:text-outline/40" placeholder="Tell us about your idea..." rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-primary-container text-on-primary-container font-bold rounded-xl transition-all hover:shadow-[0_0_30px_rgba(245,97,27,0.3)] hover:scale-[1.02]">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA -->
+<section class="py-24 px-8 text-center bg-surface">
+<div class="max-w-3xl mx-auto space-y-8">
+<h2 class="text-5xl font-headline font-bold">Have a similar idea?</h2>
+<p class="text-on-surface-variant text-lg">Our engineering team is ready to scale your vision. From concept to global deployment, we are your strategic technology partner.</p>
+<button class="px-12 py-5 bg-primary text-on-primary font-bold rounded-full text-lg hover:bg-primary-container transition-all">Hire Developers</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-950 w-full pt-20 pb-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-xl font-black text-stone-100">Code Creative.</div>
+<p class="text-sm text-stone-400">Engineering future-proof digital experiences for global industry leaders.</p>
+</div>
+<div>
+<h5 class="text-orange-500 font-bold mb-6 text-sm">Global Offices</h5>
+<ul class="space-y-3 text-stone-400 text-sm">
+<li><a class="hover:text-orange-500 transition-colors" href="#">London</a></li>
+<li><a class="hover:text-orange-500 transition-colors" href="#">New York</a></li>
+<li><a class="hover:text-orange-500 transition-colors" href="#">Tokyo</a></li>
+<li><a class="hover:text-orange-500 transition-colors" href="#">Dubai</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-orange-500 font-bold mb-6 text-sm">Resources</h5>
+<ul class="space-y-3 text-stone-400 text-sm">
+<li><a class="hover:text-orange-500 transition-colors" href="#">Newsletter</a></li>
+<li><a class="hover:text-orange-500 transition-colors" href="#">Case Studies</a></li>
+<li><a class="hover:text-orange-500 transition-colors" href="#">Open Source</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-orange-500 font-bold mb-6 text-sm">Legal</h5>
+<ul class="space-y-3 text-stone-400 text-sm">
+<li><a class="hover:text-orange-500 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-orange-500 transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-stone-500">© 2024 Code Creative. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-stone-500 hover:text-orange-500 cursor-pointer">public</span>
+<span class="material-symbols-outlined text-stone-500 hover:text-orange-500 cursor-pointer">share</span>
+</div>
+</div>
+</footer>
+</body></html>

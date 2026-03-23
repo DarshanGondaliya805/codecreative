@@ -1,0 +1,530 @@
+import { motion, useScroll, useTransform, useSpring, useInView } from "framer-motion"
+import { useRef } from "react"
+import Lottie from "lottie-react"
+
+// ─── Types ────────────────────────────────────────────────────────────────────
+interface ProcessStep {
+  number: string
+  title: string
+  description: string
+  accent: string
+  glow: string
+  side: "left" | "right"          // which side the card sits on
+  lottieData?: object | null      // pass your imported JSON here
+  lottieFile?: string             // filename hint (for your reference)
+}
+
+// ─── Steps Data ───────────────────────────────────────────────────────────────
+// side: "left"  → card on LEFT,  icon on center line
+// side: "right" → card on RIGHT, icon on center line
+const steps: ProcessStep[] = [
+  {
+    number: "01", title: "Discover", side: "left",
+    description: "We explore your business goals, target audience, and technical challenges to fully understand your product vision and opportunities.",
+    accent: "#ec5b13", glow: "rgba(236,91,19,0.35)",
+    lottieData: null, lottieFile: "discover.json",
+  },
+  {
+    number: "02", title: "Research", side: "right",
+    description: "Through competitor analysis, market research, and user behavior insights, we identify opportunities that give your product a strategic advantage.",
+    accent: "#6366f1", glow: "rgba(99,102,241,0.35)",
+    lottieData: null, lottieFile: "research.json",
+  },
+  {
+    number: "03", title: "Strategy", side: "left",
+    description: "We design a scalable roadmap, choose the right technologies, and structure the architecture to support long-term growth.",
+    accent: "#8b5cf6", glow: "rgba(139,92,246,0.35)",
+    lottieData: null, lottieFile: "strategy.json",
+  },
+  {
+    number: "04", title: "Design", side: "right",
+    description: "Our design team crafts intuitive UI/UX experiences that focus on usability, aesthetics, and seamless user journeys.",
+    accent: "#ec4899", glow: "rgba(236,72,153,0.35)",
+    lottieData: null, lottieFile: "design.json",
+  },
+  {
+    number: "05", title: "Develop", side: "left",
+    description: "Our engineers build scalable, secure, and high-performance applications using modern frameworks and best coding practices.",
+    accent: "#06b6d4", glow: "rgba(6,182,212,0.35)",
+    lottieData: null, lottieFile: "develop.json",
+  },
+  {
+    number: "06", title: "Test", side: "right",
+    description: "Rigorous testing ensures performance, security, and reliability across devices and environments before deployment.",
+    accent: "#ef4444", glow: "rgba(239,68,68,0.35)",
+    lottieData: null, lottieFile: "test.json",
+  },
+  {
+    number: "07", title: "Launch", side: "left",
+    description: "We deploy your product to production with optimized infrastructure and monitoring to ensure a smooth release.",
+    accent: "#f97316", glow: "rgba(249,115,22,0.35)",
+    lottieData: null, lottieFile: "launch.json",
+  },
+  {
+    number: "08", title: "Growth", side: "right",
+    description: "After launch, we continuously optimize performance, introduce new features, and scale infrastructure as your product grows.",
+    accent: "#10b981", glow: "rgba(16,185,129,0.35)",
+    lottieData: null, lottieFile: "growth.json",
+  },
+]
+
+// ─── Lottie Placeholder ───────────────────────────────────────────────────────
+// Shown when lottieData is null — replace with your real Lottie once you have the JSON
+function LottiePlaceholder({ accent, number }: { accent: string; number: string }) {
+  return (
+    <motion.div
+      animate={{ rotate: [0, 360] }}
+      transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+      style={{
+        width: 80, height: 80, borderRadius: "50%",
+        border: `2px dashed ${accent}55`,
+        display: "flex", alignItems: "center", justifyContent: "center",
+        position: "relative",
+      }}
+    >
+      <div
+        style={{
+          width: 48, height: 48, borderRadius: "50%",
+          background: `${accent}15`,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          fontFamily: "'Syne', sans-serif", fontSize: 16, fontWeight: 800,
+          color: accent,
+        }}
+      >
+        {number}
+      </div>
+    </motion.div>
+  )
+}
+
+// ─── Step Card ────────────────────────────────────────────────────────────────
+function StepCard({ step, isVisible }: { step: ProcessStep; isVisible: boolean }) {
+  const fromX = step.side === "right" ? 60 : -60
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: fromX, filter: "blur(6px)" }}
+      animate={
+        isVisible
+          ? { opacity: 1, x: 0, filter: "blur(0px)" }
+          : { opacity: 0, x: fromX, filter: "blur(6px)" }
+      }
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+      style={{ width: "100%" }}
+    >
+      <div
+        style={{
+          background: "#ffffff",
+          borderRadius: 20,
+          border: "1px solid #f0f0f5",
+          boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
+          padding: "28px 26px",
+          position: "relative",
+          overflow: "hidden",
+          transition: "box-shadow 0.3s, transform 0.3s",
+        }}
+        onMouseEnter={e => {
+          const el = e.currentTarget as HTMLDivElement
+          el.style.boxShadow = `0 20px 50px ${step.glow}, 0 0 0 1px ${step.accent}22`
+          el.style.transform = "translateY(-4px)"
+        }}
+        onMouseLeave={e => {
+          const el = e.currentTarget as HTMLDivElement
+          el.style.boxShadow = "0 2px 16px rgba(0,0,0,0.05)"
+          el.style.transform = "translateY(0)"
+        }}
+      >
+        {/* Top accent bar */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: isVisible ? 1 : 0 }}
+          transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          style={{
+            position: "absolute", top: 0, left: 0, right: 0, height: 3,
+            background: `linear-gradient(90deg, ${step.accent}, ${step.accent}44)`,
+            borderRadius: "20px 20px 0 0",
+            transformOrigin: "left",
+          }}
+        />
+
+        {/* Ghost number */}
+        <div
+          style={{
+            position: "absolute", top: -8, right: 16,
+            fontSize: 80, fontWeight: 900, lineHeight: 1,
+            fontFamily: "'Syne', sans-serif",
+            color: step.accent, opacity: 0.05,
+            userSelect: "none", pointerEvents: "none",
+          }}
+        >
+          {step.number}
+        </div>
+
+        {/* Content */}
+        <div style={{ position: "relative", zIndex: 1 }}>
+
+          {/* Lottie animation area */}
+          <div style={{ marginBottom: 16 }}>
+            {step.lottieData ? (
+              // ✅ Real Lottie — will play once visible
+              <Lottie
+                animationData={step.lottieData}
+                loop={true}
+                autoplay={isVisible}
+                style={{ width: 80, height: 80 }}
+              />
+            ) : (
+              // Placeholder spinner — remove once you add the JSON
+              isVisible && <LottiePlaceholder accent={step.accent} number={step.number} />
+            )}
+          </div>
+
+          {/* Step badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
+            transition={{ duration: 0.45, delay: 0.25 }}
+          >
+            <span
+              style={{
+                display: "inline-block",
+                fontSize: 10, fontWeight: 800,
+                letterSpacing: "0.28em",
+                textTransform: "uppercase",
+                padding: "4px 12px",
+                borderRadius: 100,
+                background: `${step.accent}15`,
+                color: step.accent,
+                marginBottom: 12,
+              }}
+            >
+              Step {step.number}
+            </span>
+          </motion.div>
+
+          {/* Title */}
+          <motion.h3
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 14 }}
+            transition={{ duration: 0.5, delay: 0.32 }}
+            style={{
+              fontFamily: "'Syne', sans-serif",
+              fontSize: 22, fontWeight: 800,
+              letterSpacing: "-0.03em",
+              color: "#0f1129",
+              marginBottom: 10, lineHeight: 1.2,
+            }}
+          >
+            {step.title}
+          </motion.h3>
+
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 8 }}
+            transition={{ duration: 0.5, delay: 0.42 }}
+            style={{
+              fontSize: 14, color: "#6b7280",
+              lineHeight: 1.75,
+            }}
+          >
+            {step.description}
+          </motion.p>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
+
+// ─── Center Icon Node ─────────────────────────────────────────────────────────
+function CenterNode({ step, isVisible }: { step: ProcessStep; isVisible: boolean }) {
+  return (
+    <div
+      style={{
+        display: "flex", flexDirection: "column",
+        alignItems: "center", justifyContent: "center",
+        flexShrink: 0, position: "relative", zIndex: 10,
+        width: 64,
+      }}
+    >
+      {/* Ripple 1 */}
+      <motion.div
+        initial={{ scale: 1, opacity: 0 }}
+        animate={isVisible ? { scale: [1, 2.4], opacity: [0.45, 0] } : {}}
+        transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+        style={{
+          position: "absolute", width: 56, height: 56, borderRadius: "50%",
+          background: step.glow, pointerEvents: "none",
+        }}
+      />
+      {/* Ripple 2 */}
+      <motion.div
+        initial={{ scale: 1, opacity: 0 }}
+        animate={isVisible ? { scale: [1, 1.9], opacity: [0.3, 0] } : {}}
+        transition={{ duration: 0.9, delay: 0.38, ease: "easeOut" }}
+        style={{
+          position: "absolute", width: 56, height: 56, borderRadius: "50%",
+          background: step.glow, pointerEvents: "none",
+        }}
+      />
+
+      {/* Icon circle */}
+      <motion.div
+        initial={{ scale: 0, rotate: -20, opacity: 0 }}
+        animate={
+          isVisible
+            ? { scale: 1, rotate: 0, opacity: 1 }
+            : { scale: 0, rotate: -20, opacity: 0 }
+        }
+        transition={{ type: "spring", stiffness: 240, damping: 15, delay: 0.15 }}
+        whileHover={{ scale: 1.12, rotate: 5 }}
+        style={{
+          width: 56, height: 56, borderRadius: 16,
+          background: `linear-gradient(135deg, ${step.accent}, ${step.accent}bb)`,
+          boxShadow: `0 8px 28px ${step.glow}`,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          color: "#fff", position: "relative", overflow: "hidden",
+          cursor: "default",
+        }}
+      >
+        {/* Shine */}
+        <div
+          style={{
+            position: "absolute", top: -8, left: -8,
+            width: 28, height: 28, background: "rgba(255,255,255,0.18)",
+            transform: "rotate(45deg)", borderRadius: 4,
+          }}
+        />
+        <span
+          style={{
+            fontFamily: "'Syne', sans-serif",
+            fontSize: 14, fontWeight: 900,
+            position: "relative", zIndex: 1,
+          }}
+        >
+          {step.number}
+        </span>
+      </motion.div>
+
+      {/* Connector dot */}
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: isVisible ? 1 : 0 }}
+        transition={{ duration: 0.3, delay: 0.1 }}
+        style={{
+          width: 10, height: 10, borderRadius: "50%",
+          background: "#fff",
+          border: `2.5px solid ${step.accent}`,
+          marginTop: 10,
+          boxShadow: `0 0 8px ${step.glow}`,
+        }}
+      />
+    </div>
+  )
+}
+
+// ─── Step Row ─────────────────────────────────────────────────────────────────
+function StepRow({ step }: { step: ProcessStep }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const isVisible = useInView(ref, { once: true, margin: "-10% 0px -10% 0px" })
+
+  // On mobile: always stack vertically.
+  // On desktop: card left OR right, icon always in center column.
+  return (
+    <div
+      ref={ref}
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 80px 1fr",
+        alignItems: "center",
+        gap: "0 24px",
+        position: "relative",
+      }}
+      className="process-row"
+    >
+      {/* LEFT cell */}
+      <div style={{ display: "flex", justifyContent: "flex-end" }}>
+        {step.side === "left" && <StepCard step={step} isVisible={isVisible} />}
+      </div>
+
+      {/* CENTER — always the icon node */}
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <CenterNode step={step} isVisible={isVisible} />
+      </div>
+
+      {/* RIGHT cell */}
+      <div style={{ display: "flex", justifyContent: "flex-start" }}>
+        {step.side === "right" && <StepCard step={step} isVisible={isVisible} />}
+      </div>
+    </div>
+  )
+}
+
+// ─── Main Section ─────────────────────────────────────────────────────────────
+export default function Process() {
+  const sectionRef = useRef<HTMLElement>(null)
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 80%", "end 20%"],
+  })
+
+  const rawLine = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+  const lineHeight = useSpring(rawLine as any, { stiffness: 60, damping: 20 })
+
+  return (
+    <section
+      ref={sectionRef}
+      style={{
+        padding: "96px 24px",
+        background: "#f8f8fb",
+        position: "relative",
+        overflow: "hidden",
+        fontFamily: "'DM Sans', sans-serif",
+      }}
+    >
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:wght@400;500;600&display=swap');
+
+        /* Mobile: stack cards single column */
+        @media (max-width: 768px) {
+          .process-row {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+          .process-row > div:nth-child(1),
+          .process-row > div:nth-child(3) {
+            justify-content: center !important;
+          }
+        }
+
+        .process-row { transition: none; }
+      `}</style>
+
+      {/* ── Background grid ── */}
+      <div
+        style={{
+          position: "absolute", inset: 0, opacity: 0.025, pointerEvents: "none",
+          backgroundImage: "linear-gradient(#000 1px,transparent 1px),linear-gradient(90deg,#000 1px,transparent 1px)",
+          backgroundSize: "48px 48px",
+        }}
+      />
+
+      {/* ── Ambient glows ── */}
+      <div style={{
+        position: "absolute", top: "20%", right: "-8%",
+        width: 500, height: 500, borderRadius: "50%",
+        background: "rgba(236,91,19,0.04)", filter: "blur(100px)", pointerEvents: "none",
+      }} />
+      <div style={{
+        position: "absolute", bottom: "25%", left: "-8%",
+        width: 400, height: 400, borderRadius: "50%",
+        background: "rgba(6,182,212,0.04)", filter: "blur(80px)", pointerEvents: "none",
+      }} />
+
+      <div style={{ maxWidth: 1080, margin: "0 auto", position: "relative", zIndex: 1 }}>
+
+        {/* ── Header ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 36 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          style={{ textAlign: "center", marginBottom: 80 }}
+        >
+          <p style={{
+            fontSize: 10, fontWeight: 800, letterSpacing: "0.32em",
+            textTransform: "uppercase", color: "#ec5b13", marginBottom: 10,
+          }}>
+            How We Work
+          </p>
+          <h2 style={{
+            fontFamily: "'Syne', sans-serif",
+            fontSize: "clamp(30px, 5vw, 46px)",
+            fontWeight: 800, letterSpacing: "-0.04em",
+            color: "#0f1129", marginBottom: 12, lineHeight: 1.1,
+          }}>
+            Our Process
+          </h2>
+          <p style={{ fontSize: 15, color: "#9ca3af", maxWidth: 420, margin: "0 auto", lineHeight: 1.65 }}>
+            Eight steps from idea to impact — refined through hundreds of successful projects.
+          </p>
+        </motion.div>
+
+        {/* ── Timeline ── */}
+        <div style={{ position: "relative" }}>
+
+          {/* Static background line */}
+          <div
+            style={{
+              position: "absolute",
+              left: "50%", transform: "translateX(-50%)",
+              top: 0, bottom: 0, width: 1,
+              background: "#e5e7eb",
+              zIndex: 0,
+            }}
+            className="timeline-line"
+          />
+
+          {/* Animated fill line */}
+          <motion.div
+            style={{
+              position: "absolute",
+              left: "50%", transform: "translateX(-50%)",
+              top: 0, width: 2,
+              height: lineHeight as any,
+              background: "linear-gradient(to bottom,#ec5b13,#6366f1,#8b5cf6,#ec4899,#06b6d4,#ef4444,#f97316,#10b981)",
+              borderRadius: 2,
+              zIndex: 1,
+              transformOrigin: "top",
+            }}
+            className="timeline-line"
+          />
+
+          {/* Rows */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 72 }}>
+            {steps.map((step) => (
+              <StepRow key={step.number} step={step} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/*
+────────────────────────────────────────────────
+  HOW TO ADD YOUR LOTTIE JSON FILES
+────────────────────────────────────────────────
+
+1. Place JSON files in /public/lottie/ or import them directly:
+
+   import discoverAnim from "@/public/lottie/discover.json"
+   import researchAnim from "@/public/lottie/research.json"
+   // ... etc
+
+2. Pass to steps data:
+
+   { number:"01", title:"Discover", ..., lottieData: discoverAnim }
+   { number:"02", title:"Research", ..., lottieData: researchAnim }
+
+3. The Lottie component will automatically play when the card
+   scrolls into view (autoplay={isVisible}).
+
+4. Recommended free Lottie sources:
+   - https://lottiefiles.com (search: discover, research, strategy, etc.)
+   - https://lordicon.com
+   - https://icons8.com/animated-icons
+
+   Suggested searches:
+   01 Discover   → "search" / "explore" / "magnifier"
+   02 Research   → "analytics" / "graph" / "chart"
+   03 Strategy   → "roadmap" / "planning" / "target"
+   04 Design     → "design" / "pencil" / "wireframe"
+   05 Develop    → "coding" / "code" / "developer"
+   06 Test       → "testing" / "bug" / "checklist"
+   07 Launch     → "rocket" / "launch" / "deploy"
+   08 Growth     → "growth" / "trending" / "success"
+────────────────────────────────────────────────
+*/

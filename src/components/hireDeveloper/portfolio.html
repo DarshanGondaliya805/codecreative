@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NeuralAgency | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#ffdad6",
+              "surface": "#1c110b",
+              "outline": "#a98a7f",
+              "on-tertiary-fixed-variant": "#00497c",
+              "on-secondary-fixed": "#370e00",
+              "surface-variant": "#40322b",
+              "on-secondary-fixed-variant": "#783112",
+              "on-tertiary-container": "#002b4d",
+              "tertiary-container": "#1b95f1",
+              "on-tertiary-fixed": "#001d36",
+              "tertiary": "#9ecaff",
+              "on-primary-fixed-variant": "#7f2b00",
+              "on-error": "#690005",
+              "on-background": "#f6ded3",
+              "background": "#1c110b",
+              "secondary-fixed-dim": "#ffb599",
+              "primary-fixed-dim": "#ffb599",
+              "on-primary": "#5a1c00",
+              "inverse-on-surface": "#3b2d27",
+              "surface-container": "#291d17",
+              "surface-dim": "#1c110b",
+              "on-tertiary": "#003258",
+              "on-primary-container": "#4f1700",
+              "surface-container-high": "#352720",
+              "error": "#ffb4ab",
+              "on-secondary": "#5a1c00",
+              "secondary": "#ffb599",
+              "on-surface-variant": "#e2bfb3",
+              "primary": "#ffb599",
+              "tertiary-fixed-dim": "#9ecaff",
+              "outline-variant": "#5a4138",
+              "error-container": "#93000a",
+              "tertiary-fixed": "#d1e4ff",
+              "surface-container-low": "#251913",
+              "inverse-primary": "#a73a00",
+              "primary-fixed": "#ffdbce",
+              "surface-tint": "#ffb599",
+              "surface-container-highest": "#40322b",
+              "surface-container-lowest": "#160c07",
+              "on-surface": "#f6ded3",
+              "inverse-surface": "#f6ded3",
+              "primary-container": "#f5611b",
+              "on-primary-fixed": "#370e00",
+              "surface-bright": "#45362f",
+              "secondary-fixed": "#ffdbce",
+              "secondary-container": "#783112",
+              "on-secondary-container": "#ff9c74"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(41, 29, 23, 0.4);
+            backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 181, 153, 0.2);
+        }
+        .neural-gradient {
+            background: linear-gradient(135deg, #ffb599 0%, #f5611b 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8f6f6]/60 backdrop-blur-xl shadow-[0_32px_64px_rgba(34,22,16,0.06)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold text-[#221610] font-headline tracking-tight">NeuralAgency</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#ec5b13] font-bold border-b-2 border-[#ec5b13] pb-1 font-headline" href="#">Work</a>
+<a class="text-[#221610] font-medium hover:text-[#ec5b13] transition-colors duration-300 font-headline" href="#">Services</a>
+<a class="text-[#221610] font-medium hover:text-[#ec5b13] transition-colors duration-300 font-headline" href="#">Insights</a>
+<a class="text-[#221610] font-medium hover:text-[#ec5b13] transition-colors duration-300 font-headline" href="#">About</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#221610] hover:text-[#ec5b13] transition-colors">search</button>
+<button class="bg-[#ec5b13] text-white px-6 py-2.5 rounded-xl font-headline font-bold scale-95 active:scale-90 transition-transform">Start Project</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[614px] flex items-center overflow-hidden px-8">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-tertiary/5 rounded-full blur-[100px]"></div>
+</div>
+<div class="max-w-7xl mx-auto relative z-10 w-full">
+<div class="max-w-3xl">
+<h1 class="text-6xl md:text-8xl font-headline font-bold tracking-tighter text-on-surface mb-8">
+                        Our <span class="text-primary italic">Portfolio</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed mb-12">
+                        Explore our latest projects and success stories across multiple industries, where intelligence meets architectural precision.
+                    </p>
+<div class="flex items-center gap-4">
+<div class="h-px w-24 bg-outline-variant/30"></div>
+<span class="font-headline font-medium tracking-widest uppercase text-sm text-primary">Selected Works 2024</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter & Search Bar -->
+<section class="max-w-7xl mx-auto px-8 py-12">
+<div class="glass-panel p-6 rounded-2xl flex flex-col lg:flex-row gap-8 items-center justify-between">
+<div class="flex flex-wrap gap-2 justify-center lg:justify-start">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary-container font-headline font-bold text-sm">All</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-headline font-medium text-sm">Web Development</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-headline font-medium text-sm">Mobile Apps</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-headline font-medium text-sm">UI/UX</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-headline font-medium text-sm">AI/ML</button>
+</div>
+<div class="flex items-center gap-4 w-full lg:w-auto">
+<div class="relative flex-grow lg:w-64">
+<input class="w-full bg-surface-container-lowest border-none rounded-xl py-3 pl-12 pr-4 focus:ring-1 focus:ring-primary/40 placeholder:text-outline/50" placeholder="Search projects..." type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline/50">search</span>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border-none rounded-xl py-3 pl-4 pr-10 focus:ring-1 focus:ring-primary/40 text-on-surface text-sm font-medium">
+<option>Newest First</option>
+<option>Oldest First</option>
+<option>Popularity</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline/50 pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="max-w-7xl mx-auto px-8 py-12">
+<h2 class="font-headline text-3xl font-bold mb-12 flex items-center gap-4">
+<span class="w-8 h-[2px] bg-primary"></span>
+                Featured Impact
+            </h2>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Featured Card 1 -->
+<div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-low">
+<div class="aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Data visualization dashboard in dark mode" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6lcELLQej67lbtkOZvbihH1FhE8zavtPIItSzF5UWx1Q0Cm6YY6KIcSOJZn735UltJFiT5gj6mNyGHUBBLqqrKOdG12F5ARlzHTCGZIk8c80XU4CM43Z9IE72BaSu_h6OFXTGiXhqtD4gmBOo17j8joTNWfx01wrhr22oVz4JNxtGuo6LCJK503eSMxqJI6YuLkhbx7AaYvtJKqOl8_JC4WLlIjWsl37BOJDohiMUKEhtgfalEJJVP5VtxBCiKUMYFJlj48i0DV0"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent p-12 flex flex-col justify-end">
+<div class="flex items-center gap-4 mb-6">
+<div class="px-4 py-1 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-primary text-xs font-bold tracking-widest uppercase">E-Commerce</div>
+<div class="px-4 py-1 rounded-full bg-tertiary/20 backdrop-blur-md border border-tertiary/30 text-tertiary text-xs font-bold tracking-widest uppercase">AI Driven</div>
+</div>
+<h3 class="text-4xl font-headline font-bold text-on-surface mb-4">EcoConnect App</h3>
+<p class="text-on-surface-variant max-w-md mb-8">Revolutionizing sustainable supply chain tracking through neural network optimization.</p>
+<div class="flex items-center gap-12">
+<div>
+<div class="text-3xl font-headline font-bold text-primary">200%</div>
+<div class="text-xs uppercase tracking-tighter text-outline font-bold">Traffic Increase</div>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-primary">500k+</div>
+<div class="text-xs uppercase tracking-tighter text-outline font-bold">Active Users</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Card 2 -->
+<div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-low">
+<div class="aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern geometric interface for SaaS platform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp7uM9KbG5O3Q-Yzp6dkYw14tHaN0HUwF5QrK8PmM-16UAnSX4ljQ8e92s2nmiN8ahnHx8GzUehHOH3k48wpP577gH4wOEPVkVfjpZ2XBw9EGm9sFc2OqMmkI217weGb96NtmT1y_FOlzNcMtvpJBS8vgSfZe4DFMe6D-0iS_Vw6xxOoY00ABAaSLo4yFMB0W05cMnaXjShn6j1X2xJdzOJ5MmoQ5q6pcGz9bwVAAWA_IkYlY_xaLrOeSvJTYwDotmY6ifNA2cunc"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent p-12 flex flex-col justify-end">
+<div class="flex items-center gap-4 mb-6">
+<div class="px-4 py-1 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-primary text-xs font-bold tracking-widest uppercase">Fintech</div>
+<div class="px-4 py-1 rounded-full bg-tertiary/20 backdrop-blur-md border border-tertiary/30 text-tertiary text-xs font-bold tracking-widest uppercase">Bento UI</div>
+</div>
+<h3 class="text-4xl font-headline font-bold text-on-surface mb-4">Nexus SaaS Dashboard</h3>
+<p class="text-on-surface-variant max-w-md mb-8">Centralized neural hub for enterprise resource planning and predictive analytics.</p>
+<div class="flex items-center gap-12">
+<div>
+<div class="text-3xl font-headline font-bold text-primary">40%</div>
+<div class="text-xs uppercase tracking-tighter text-outline font-bold">Cost Reduction</div>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-primary">12ms</div>
+<div class="text-xs uppercase tracking-tighter text-outline font-bold">Average Latency</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Grid -->
+<section class="max-w-7xl mx-auto px-8 py-20">
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Portfolio Card 1 -->
+<div class="group flex flex-col bg-surface-container rounded-[1.25rem] overflow-hidden border border-transparent hover:border-primary/20 transition-all duration-300">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist mobile app interface design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXLtOu50fkaJNHOuuMNeOVMxux7eWBA2yRnrSDFiqBhH5Z-UGxy_ztNTTjquwopCIVF3tlVerEDPb0L7MZ7yf-PjTTLe9F3Hg0ncf5SEgB_-3HPzsLLL_3VqGmMof7mG7q7Sn_jEiZU3MY4I1K_m5P6L4rZlSe64YzwGR3JT8CAKy8YyCBZMlCRn0k7e9kGBnLaLT_EddvxVB7olJGFJ81Ul4r5Si_k84w8t53qIVZHTkaeasXGgW2a8Fn-96B_-xZR_KUysQLhLI"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] font-bold uppercase tracking-wider text-outline px-2 py-0.5 rounded border border-outline/20">React</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-outline px-2 py-0.5 rounded border border-outline/20">Next.js</span>
+</div>
+<h4 class="text-xl font-headline font-bold mb-3">Lumina Health Portal</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-8 flex-grow">Advanced telemedicine platform with real-time biometric tracking and AI diagnostics.</p>
+<button class="flex items-center gap-2 text-primary font-headline font-bold group/btn">
+                            View Case Study 
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Portfolio Card 2 -->
+<div class="group flex flex-col bg-surface-container rounded-[1.25rem] overflow-hidden border border-transparent hover:border-primary/20 transition-all duration-300">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract 3D digital art visual" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC8f76boB84l4jshmJ4QoEocxtE3jPlx9O85DMzJ03LbQyn7VEhxVWB1NRmcOBJL4rOeTZF4jhTpg7it94hzsHG8zamv2EkHyd5mLZLwzf98vl4geMeRG0fE-LfcAirQy5utbFCRByAjqW8gk2e2uPuHYX5F5BOkxEGxMcyOUhQAgEXLoXIf-Z9NhfmVLH9UNmML1JJkr4qv86pPaxkJWT5LnG6JaRaZeJZxYIHVBBGSxC4X0CNj-amwd8O3b2ioBibeW8rAYn__k"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] font-bold uppercase tracking-wider text-outline px-2 py-0.5 rounded border border-outline/20">Three.js</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-outline px-2 py-0.5 rounded border border-outline/20">Vite</span>
+</div>
+<h4 class="text-xl font-headline font-bold mb-3">Artify NFT Hub</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-8 flex-grow">A high-fidelity immersive marketplace for curated digital architectural assets.</p>
+<button class="flex items-center gap-2 text-primary font-headline font-bold group/btn">
+                            View Case Study 
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Portfolio Card 3 -->
+<div class="group flex flex-col bg-surface-container rounded-[1.25rem] overflow-hidden border border-transparent hover:border-primary/20 transition-all duration-300">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cryptocurrency exchange mobile interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB22YqTviGTIXD8zbHo1wd3rjWJmteAq419rjXM9JNK_GpFSXYfCvFopU8CpU2apDYje0O5G2BM4f-GdUq95sAelu147XQpUgPGARbia9qbFGwm3OT1ViE7kSNBuQWjn11JxPTpUChbG8eOBZzt6xYgNWUG2jk5kTYENinLDDjMbcds5i7fDevpXbtLTiNR2WfujrzQK7edIhtCSN_PtTo9POqBMLscGh_MdxiB7ZThyU_V9zrzEuZBZT1xVZcgKdRTFs96mPr0Tf0"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] font-bold uppercase tracking-wider text-outline px-2 py-0.5 rounded border border-outline/20">Flutter</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-outline px-2 py-0.5 rounded border border-outline/20">Rust</span>
+</div>
+<h4 class="text-xl font-headline font-bold mb-3">Velocity Trade App</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-8 flex-grow">Ultra-low latency mobile trading engine for cross-border digital assets.</p>
+<button class="flex items-center gap-2 text-primary font-headline font-bold group/btn">
+                            View Case Study 
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-20 flex justify-center">
+<button class="px-12 py-4 rounded-xl neural-gradient text-on-primary font-headline font-bold shadow-lg shadow-primary/20 scale-100 hover:scale-105 active:scale-95 transition-all">
+                    Load More Projects
+                </button>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-surface-container-low py-24 px-8 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+<div class="space-y-2">
+<div class="text-5xl md:text-6xl font-headline font-bold text-primary">250+</div>
+<div class="text-xs font-bold uppercase tracking-widest text-outline">Projects Completed</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl md:text-6xl font-headline font-bold text-primary">120+</div>
+<div class="text-xs font-bold uppercase tracking-widest text-outline">Clients Served</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl md:text-6xl font-headline font-bold text-primary">15+</div>
+<div class="text-xs font-bold uppercase tracking-widest text-outline">Industries</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl md:text-6xl font-headline font-bold text-primary">7+</div>
+<div class="text-xs font-bold uppercase tracking-widest text-outline">Years Exp</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="max-w-7xl mx-auto px-8 py-32">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline text-5xl font-bold mb-6">Voices of <span class="text-tertiary italic">Excellence</span></h2>
+<p class="text-on-surface-variant">Don't just take our word for it. Our partners define our legacy through their success.</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline/30 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
+<span class="material-symbols-outlined group-hover:text-on-primary">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline/30 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
+<span class="material-symbols-outlined group-hover:text-on-primary">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="glass-panel p-10 rounded-[2rem] flex flex-col">
+<div class="flex text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-lg italic text-on-surface mb-8">"NeuralAgency didn't just build an app; they engineered a digital experience that transformed our business model. Their precision is unmatched."</p>
+<div class="mt-auto flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Corporate professional portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYd69GS1URbiKqRhS-9wzVcm4tkLRiOjtVMBFhXUfeB2-py-rKVj8KMxgx4bJ29rLoIMBgOJV1Rl3h1QmOTrmlrVVcxFrpSNC_Rl3uv3vyeCcMYbo870NbTCagYlb7gKoTdjwosyDPuAbqX-0y-S-KNMxxz8QnnNWJVFmsqlk95kPLqJUneVxirXnYFx1SCcL6uK61K6rBvaBrx6KImYU1n-lJ1p40CRuZUoTxsb3GPgDuNRBRwH60pM-RsShGf6VuYIttNYYpXpU"/>
+<div>
+<div class="font-headline font-bold text-sm">Marcus Chen</div>
+<div class="text-xs text-outline">CTO, EcoConnect</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="glass-panel p-10 rounded-[2rem] flex flex-col">
+<div class="flex text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-lg italic text-on-surface mb-8">"The editorial feel of the Nexus Dashboard has made our complex data analytics accessible to all levels of management."</p>
+<div class="mt-auto flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Professional woman portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcaG69bwW_g6BIn4fo9IdIXiJ6imrMY0mSETXMLEPL2w7lFEVvloun0N1RdOKXom3GuKK3_19cRqTbAEbp_tV3oEJQ1ry_xdCC7SlR8RIE6RBcvyjW5JZgVxYsDC95nISTrDPv2pam9s98PAlr5F21S_5pSVThtUfwX0dgXaeGr2z2NWvi7N6R7Z3x5uTV7wftYNk1AgbJJYsVtkvZf3Uxh1yU6HukgxNbGwVaTchD0L8mVb1tFcOV155tUAao0gLMB3i1oBgGzGg"/>
+<div>
+<div class="font-headline font-bold text-sm">Sarah Jenkins</div>
+<div class="text-xs text-outline">Product Lead, Nexus SaaS</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="glass-panel p-10 rounded-[2rem] flex flex-col">
+<div class="flex text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<p class="text-lg italic text-on-surface mb-8">"Exceptional speed and attention to detail. The UI/UX transition was seamless, and the technical support has been world-class."</p>
+<div class="mt-auto flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="CEO portrait in office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE_iEnLjeSLfIIBl1Vcirom-c5p-sc807NBpla4AsBmC0_crRPI8DtlV_1CQ1baKkAKZvFkjfddYSzew3FUOfSK-ChiKik6rLI6bfJudSVHIATxTWIjxzoLWbyp1JXolOHGXhP-wEQWTnFp4eTDBp7EGmDae2YUOCC0PuJCyO70PNscWQqe8gIONohpvbxWeGnSIIZEU_IptWknCQpXx_cQdfkAscsLrgpUmlMU7TfWGMbRC7-_K2MN3LShcAD0CLrqlfySKkr_GY"/>
+<div>
+<div class="font-headline font-bold text-sm">David Miller</div>
+<div class="text-xs text-outline">CEO, Artify Hub</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-8 py-20">
+<div class="neural-gradient rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-7xl font-headline font-bold text-on-primary mb-8 tracking-tighter">Have a Project in Mind?</h2>
+<p class="text-on-primary/80 text-xl max-w-2xl mx-auto mb-12">Let's craft your vision with neural intelligence and luminescent design. Our team is ready to scale your next big idea.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="px-10 py-5 bg-on-primary text-primary font-headline font-bold rounded-2xl hover:bg-surface hover:text-on-surface transition-all scale-100 hover:scale-105">Start Your Project</button>
+<button class="px-10 py-5 bg-transparent border-2 border-on-primary/30 text-on-primary font-headline font-bold rounded-2xl hover:bg-on-primary/10 transition-all">Hire Experts</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#221610] w-full pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between border-t border-[#f8f6f6]/10 pt-10">
+<div class="mb-12 md:mb-0">
+<div class="text-xl font-black text-[#f8f6f6] font-headline mb-6">NeuralAgency</div>
+<p class="font-inter text-sm text-[#f8f6f6]/60 max-w-xs">Pioneering the intersection of artificial intelligence and high-end digital craftsmanship.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<span class="text-[#f8f6f6] font-bold text-sm">Company</span>
+<a class="font-inter text-sm text-[#f8f6f6]/60 hover:text-[#ec5b13] transition-all" href="#">About</a>
+<a class="font-inter text-sm text-[#f8f6f6]/60 hover:text-[#ec5b13] transition-all" href="#">Services</a>
+<a class="font-inter text-sm text-[#f8f6f6]/60 hover:text-[#ec5b13] transition-all" href="#">Work</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-[#f8f6f6] font-bold text-sm">Legal</span>
+<a class="font-inter text-sm text-[#f8f6f6]/80 hover:text-[#ec5b13] transition-all" href="#">Privacy Policy</a>
+<a class="font-inter text-sm text-[#f8f6f6]/80 hover:text-[#ec5b13] transition-all" href="#">Terms of Service</a>
+<a class="font-inter text-sm text-[#f8f6f6]/80 hover:text-[#ec5b13] transition-all" href="#">Cookie Settings</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-[#f8f6f6] font-bold text-sm">Connect</span>
+<a class="font-inter text-sm text-[#f8f6f6]/80 hover:text-[#ec5b13] transition-all" href="#">LinkedIn</a>
+<a class="font-inter text-sm text-[#f8f6f6]/80 hover:text-[#ec5b13] transition-all" href="#">Instagram</a>
+<a class="font-inter text-sm text-[#f8f6f6]/80 hover:text-[#ec5b13] transition-all" href="#">X (Twitter)</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-20 text-center md:text-left">
+<span class="font-inter text-sm text-[#f8f6f6]/60">© 2024 Neural Kinetic Agency. All rights reserved.</span>
+</div>
+</footer>
+</body></html>
