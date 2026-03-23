@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#5a1c00",
+              "primary-fixed": "#ffdbce",
+              "primary": "#ffb599",
+              "on-tertiary-container": "#002b4d",
+              "surface-dim": "#1c110b",
+              "secondary-fixed-dim": "#ffb599",
+              "surface-container-highest": "#40322b",
+              "surface-container": "#291d17",
+              "outline-variant": "#5a4138",
+              "on-primary-fixed-variant": "#7f2b00",
+              "inverse-on-surface": "#3b2d27",
+              "surface-container-high": "#352720",
+              "tertiary-fixed": "#d1e4ff",
+              "surface-container-lowest": "#160c07",
+              "inverse-primary": "#a73a00",
+              "primary-fixed-dim": "#ffb599",
+              "on-tertiary": "#003258",
+              "on-secondary-container": "#ff9c74",
+              "on-secondary": "#5a1c00",
+              "on-background": "#f6ded3",
+              "surface-variant": "#40322b",
+              "surface-bright": "#45362f",
+              "on-primary-fixed": "#370e00",
+              "tertiary-fixed-dim": "#9ecaff",
+              "secondary": "#ffb599",
+              "primary-container": "#f5611b",
+              "inverse-surface": "#f6ded3",
+              "outline": "#a98a7f",
+              "on-surface": "#f6ded3",
+              "tertiary": "#9ecaff",
+              "surface": "#1c110b",
+              "on-surface-variant": "#e2bfb3",
+              "on-secondary-fixed": "#370e00",
+              "error": "#ffb4ab",
+              "on-tertiary-fixed-variant": "#00497c",
+              "secondary-container": "#783112",
+              "error-container": "#93000a",
+              "background": "#1c110b",
+              "tertiary-container": "#1b95f1",
+              "on-secondary-fixed-variant": "#783112",
+              "on-error": "#690005",
+              "on-primary-container": "#4f1700",
+              "surface-container-low": "#251913",
+              "on-tertiary-fixed": "#001d36",
+              "surface-tint": "#ffb599",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed": "#ffdbce"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(64, 50, 43, 0.4);
+            backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 181, 153, 0.2);
+        }
+        .neural-gradient {
+            background: linear-gradient(135deg, #ffb599 0%, #f5611b 100%);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(245, 97, 27, 0.15);
+        }
+        body {
+            background-color: #1c110b;
+            color: #f6ded3;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-card border-b border-outline-variant/10 px-6 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 neural-gradient rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">deployed_code</span>
+</div>
+<span class="font-headline font-bold text-xl tracking-tight">Neural Amber</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm" href="#">Process</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm" href="#">Contact</a>
+</div>
+<button class="neural-gradient text-on-primary-container px-6 py-2 rounded-xl font-label text-sm font-semibold hover:opacity-90 transition-opacity">
+                Get Started
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-tertiary/5 blur-[100px] rounded-full"></div>
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/30 border border-primary/20 mb-8">
+<span class="w-2 h-2 rounded-full neural-gradient"></span>
+<span class="text-xs font-label text-primary uppercase tracking-widest">Next-Gen UI/UX Studio</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold leading-[1.1] mb-8 tracking-tight">
+                    Crafting Beautiful &amp; <span class="text-primary">User-Centered</span> Digital Experiences
+                </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
+                    We bridge the gap between human intuition and technical excellence to build interfaces that feel natural and perform flawlessly.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="neural-gradient text-on-primary-container px-8 py-4 rounded-xl font-label font-bold text-lg hover:shadow-2xl hover:shadow-primary/20 transition-all">
+                        Start Your Design Project
+                    </button>
+<button class="bg-surface-variant/20 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 py-4 rounded-xl font-label font-bold text-lg hover:bg-surface-variant/40 transition-all">
+                        View Portfolio
+                    </button>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="relative w-full aspect-square">
+<div class="absolute top-0 right-0 w-64 h-80 glass-card rounded-2xl transform rotate-6 border border-primary/20 p-4 shadow-2xl">
+<img class="w-full h-full object-cover rounded-xl grayscale-[50%] opacity-80" data-alt="Modern mobile app dashboard interface design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaKE78r2CnkKDv5rO-ccV04W-8JAh3IH0dAs_rUlv9o67H-O56D8iQgz0eGeNlBJfXRhj-Z-3dBTEGgm0IP3aCeJ2o2m44wrwmR0Hv9-Bap0jwbaoLh4kwwc-peguyR-a3l0Sx2nYOLOVTrrqz7EFmKtDR1Hpc8RQHedBEA8Furk9lH7-tW47G9yLnnOaqnT6Ek2pugJDPMXuUvnmag3Vk2iWQYIA1JZxqfs_THWiqrq9yjWhMdqrvsYHoJA81CWMjrQgkDGwGkX4"/>
+</div>
+<div class="absolute bottom-10 left-0 w-72 h-48 glass-card rounded-2xl transform -rotate-12 border border-tertiary/20 p-4 shadow-2xl">
+<img class="w-full h-full object-cover rounded-xl opacity-60" data-alt="UX wireframe and research documentation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrjGI_xT56IwiHNORLEPL2EHEQwkEYonCXRtR4oChkwnxSW5-jNK5DBc-Z7HMhmzQvaUAXWMaohme-bZTnMB-ctyzaK2-a9QTJXDmijrGTv5aiyNoUABjbhyjuCJFqxd_83RrpMR7FelZi_H3BaOddk6mlWggJ2X2gwI2-8iErXlRtdxrfsSMa1fKcS8_tEtl3RxmtK8-u1HPEzglzUyWNbwMZ6aMIlLyco2J167FlXv94j42IDiKmhGZPbWfXVmj912vZzfKNTgI"/>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-[500px] glass-card rounded-[40px] border-[3px] border-outline-variant/30 p-2 shadow-2xl">
+<div class="bg-surface-dim h-full w-full rounded-[32px] overflow-hidden relative">
+<div class="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-surface-container rounded-full"></div>
+<img class="w-full h-full object-cover opacity-90" data-alt="High fidelity mobile application prototype" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAaLst50mGcNkxJ3NEKIIGXuu1AGjv85OjnPlpJLcJxKF9tzpblM4ar1QUse85vXhtgz13CX4RIRcbnGj1UmpPE53BB8mcZQ5bVnnIYsQOrHyOK-u4u0hLtROnPNHRJmPv99VWOBlWYVSBlbafEjLyHshMPl3CmIjBkUyL5kAIn2T1eE9DsBuXAZ1FTLtV1csc7tjWPnxbP4oIhLQxHms7ySL_zBylupP4y2a7MrFzQQHOk0IG6ZU2hXW1-frguTqNYDFX_VXyFrU"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- UI/UX Services Section (Bento Grid) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">Our Specializations</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">From discovery to deployment, we provide a full spectrum of design services tailored for modern digital products.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Large Card -->
+<div class="md:col-span-2 md:row-span-2 glass-card p-8 rounded-3xl hover:bg-surface-container transition-all group overflow-hidden relative">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[120px]">design_services</span>
+</div>
+<div class="w-14 h-14 rounded-2xl bg-primary-container/20 flex items-center justify-center mb-6 group-hover:neural-gradient transition-all">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary-container transition-colors">palette</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">UI Design</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">We create visually stunning interfaces that align perfectly with your brand identity and delight your users at every touchpoint.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            Visual Language Development
+                        </li>
+<li class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            Micro-interactions
+                        </li>
+</ul>
+</div>
+<!-- Medium Cards -->
+<div class="md:col-span-2 glass-card p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<div class="flex items-start justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 flex items-center justify-center mb-4 group-hover:bg-tertiary transition-all">
+<span class="material-symbols-outlined text-tertiary group-hover:text-on-tertiary transition-colors">person_search</span>
+</div>
+<h3 class="text-xl font-bold mb-2">UX Research</h3>
+<p class="text-on-surface-variant text-sm">Data-driven insights to understand user behaviors and pain points.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 glass-card p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center mb-4 group-hover:neural-gradient transition-all">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary-container transition-colors">account_tree</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Wireframing</h3>
+<p class="text-on-surface-variant text-xs">Architecting flows that convert.</p>
+</div>
+<div class="md:col-span-1 glass-card p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center mb-4 group-hover:neural-gradient transition-all">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary-container transition-colors">layers</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Design Systems</h3>
+<p class="text-on-surface-variant text-xs">Scalable asset libraries.</p>
+</div>
+<!-- Last Row -->
+<div class="md:col-span-2 glass-card p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">smartphone</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1">Mobile &amp; Web Design</h3>
+<p class="text-on-surface-variant text-sm">Seamless performance across all device form factors.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 glass-card p-8 rounded-3xl hover:bg-surface-container transition-all group">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-2xl bg-tertiary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-3xl">bolt</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-1">Rapid Prototyping</h3>
+<p class="text-on-surface-variant text-sm">Interactive models to test concepts before coding.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Design Process Section -->
+<section class="py-24 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="grid lg:grid-cols-12 gap-12">
+<div class="lg:col-span-4">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-6">Our Design Journey</h2>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                        We follow a structured methodology that ensures every pixel serves a purpose and every interaction adds value.
+                    </p>
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full neural-gradient flex items-center justify-center font-bold text-on-primary-container">1</div>
+<span class="font-bold">Research &amp; Discovery</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant flex items-center justify-center font-bold">2</div>
+<span class="text-on-surface-variant">User Analysis</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant flex items-center justify-center font-bold">3</div>
+<span class="text-on-surface-variant">Wireframing &amp; UI</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="surface-container-high p-8 rounded-3xl border-l-4 border-primary">
+<span class="text-primary font-bold text-sm tracking-widest uppercase mb-4 block">Phase 01</span>
+<h4 class="text-2xl font-bold mb-4">Discovery</h4>
+<p class="text-on-surface-variant">We dive deep into your business goals, target audience, and market landscape to define the core problem we're solving.</p>
+</div>
+<div class="surface-container p-8 rounded-3xl opacity-50">
+<span class="text-on-surface-variant font-bold text-sm tracking-widest uppercase mb-4 block">Phase 02</span>
+<h4 class="text-2xl font-bold mb-4">Prototyping</h4>
+<p class="text-on-surface-variant">Building high-fidelity interactive models that demonstrate the look, feel, and functionality of the final product.</p>
+</div>
+<div class="surface-container p-8 rounded-3xl opacity-50">
+<span class="text-on-surface-variant font-bold text-sm tracking-widest uppercase mb-4 block">Phase 03</span>
+<h4 class="text-2xl font-bold mb-4">Usability Testing</h4>
+<p class="text-on-surface-variant">We validate our designs with real users, gathering feedback to iterate and refine the experience until it's perfect.</p>
+</div>
+<div class="surface-container-high p-8 rounded-3xl border-l-4 border-tertiary">
+<span class="text-tertiary font-bold text-sm tracking-widest uppercase mb-4 block">Launch</span>
+<h4 class="text-2xl font-bold mb-4">Development Handoff</h4>
+<p class="text-on-surface-variant">Providing pixel-perfect specs, assets, and documentation for a seamless development process.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tools Section -->
+<section class="py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h3 class="font-label text-sm uppercase tracking-[0.3em] text-on-surface-variant mb-12">The Architect's Toolkit</h3>
+<div class="flex flex-wrap justify-center items-center gap-12 opacity-60 hover:opacity-100 transition-opacity">
+<div class="flex flex-col items-center gap-3">
+<div class="w-16 h-16 rounded-2xl glass-card flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">pentagon</span>
+</div>
+<span class="text-xs font-label">Figma</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-16 h-16 rounded-2xl glass-card flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl">admob</span>
+</div>
+<span class="text-xs font-label">Adobe XD</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-16 h-16 rounded-2xl glass-card flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl">brush</span>
+</div>
+<span class="text-xs font-label">Photoshop</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-16 h-16 rounded-2xl glass-card flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl">view_in_ar</span>
+</div>
+<span class="text-xs font-label">Framer</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-16 h-16 rounded-2xl glass-card flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl">drive_sketch</span>
+</div>
+<span class="text-xs font-label">Sketch</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Showcase -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">Signature Works</h2>
+<p class="text-on-surface-variant max-w-lg">A curated selection of our most impactful design transformations.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 group hover:translate-x-2 transition-transform">
+                    View All Case Studies
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+<!-- Project 1 -->
+<div class="group cursor-pointer">
+<div class="relative rounded-[2rem] overflow-hidden aspect-[16/10] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Fintech dashboard UI design showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIatNaXBFXkljfbm5p1IIB14zuCZI1MR5y7dYjAhxIKcwegPDLIYvbJpwWEZFRVj9XbAndTWSRbiHIb1NemwLMDWPFSnJYGiF8AX3MHIuU25cuXp0SMK0Ct09pDporRVPF9A-2GdY65_R6cJANZJPK2Qses9Xb0GlqEG5PLHNziyKvt2pFfyzMVdN_3hKChhpZeyPILtYmq4c-300AcFNQi6cA683lNHroZrb40cvY6AUeJJdICHspY3SmCAXnUm0ud5SLTu6toKM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div>
+<div class="absolute bottom-8 left-8">
+<div class="flex gap-2 mb-3">
+<span class="bg-primary/20 backdrop-blur-md text-primary px-3 py-1 rounded-full text-xs font-bold border border-primary/20">Fintech</span>
+<span class="bg-surface-container/60 backdrop-blur-md text-on-surface px-3 py-1 rounded-full text-xs font-bold">SaaS</span>
+</div>
+</div>
+</div>
+<h3 class="text-2xl font-bold group-hover:text-primary transition-colors">Quantum Pay: Digital Banking</h3>
+<p class="text-on-surface-variant">Revolutionizing cross-border payments with a seamless mobile experience.</p>
+</div>
+<!-- Project 2 -->
+<div class="group cursor-pointer">
+<div class="relative rounded-[2rem] overflow-hidden aspect-[16/10] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Eco-friendly ecommerce platform design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFz8GpKBIW1z3eXhK_wI34auFs1o9fD-jsSHd-AYvfCtA27LBv48gxoJeZDd2-nZAgn9KHGG3QiohNRz_cL5YwXUs6ulwSrFYZqdTlLSiIV7i8t4uHqz3FAuX2ga-0Zv5ORUHN_rtrGKEVgb2TuWqP4dPPb3YLhNhS9RXGBnpZm1bKH_VvcgC4bUbuEcTyKivOjfk1ZxMjG80fXdfAKChNX7Cxmzs5J0wNeAEO2judGzsu17KZxQclb4YBu3sDshVPCd0ZSwR7wN4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent opacity-60"></div>
+<div class="absolute bottom-8 left-8">
+<div class="flex gap-2 mb-3">
+<span class="bg-tertiary/20 backdrop-blur-md text-tertiary px-3 py-1 rounded-full text-xs font-bold border border-tertiary/20">E-Commerce</span>
+<span class="bg-surface-container/60 backdrop-blur-md text-on-surface px-3 py-1 rounded-full text-xs font-bold">Web Design</span>
+</div>
+</div>
+</div>
+<h3 class="text-2xl font-bold group-hover:text-primary transition-colors">Flora: Green Market Experience</h3>
+<p class="text-on-surface-variant">A minimalist approach to sustainable shopping and product storytelling.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">Why We're Different</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 border-l-2 border-outline-variant hover:border-primary transition-colors">
+<div class="text-primary font-headline text-4xl font-bold mb-4">01.</div>
+<h4 class="text-xl font-bold mb-3">User-Centered Focus</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">We don't just design for screens; we design for people. Every decision is backed by psychological principles and user feedback.</p>
+</div>
+<div class="p-8 border-l-2 border-outline-variant hover:border-primary transition-colors">
+<div class="text-primary font-headline text-4xl font-bold mb-4">02.</div>
+<h4 class="text-xl font-bold mb-3">Modern Aesthetics</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Our designs are contemporary, clean, and professional, ensuring your product looks relevant in today's competitive market.</p>
+</div>
+<div class="p-8 border-l-2 border-outline-variant hover:border-primary transition-colors">
+<div class="text-primary font-headline text-4xl font-bold mb-4">03.</div>
+<h4 class="text-xl font-bold mb-3">Design Consistency</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Through robust design systems, we ensure your product remains unified as it scales across platforms and teams.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-6 overflow-hidden">
+<div class="flex flex-col items-center mb-16 text-center">
+<h2 class="font-headline text-4xl font-bold mb-4">Voices of Success</h2>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="glass-card p-10 rounded-3xl relative">
+<span class="material-symbols-outlined text-primary/20 text-7xl absolute top-8 right-8">format_quote</span>
+<p class="text-lg leading-relaxed mb-8 relative z-10 italic">"The team at Neural Amber transformed our complex data platform into an intuitive tool that our clients actually enjoy using. Their attention to detail is unmatched."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="Client profile picture: Male executive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9xx3_dpddMYj0PeIKntbmgW3VJc53BqjKUniXji15SxEshGmU3ARcx7T0zIsIVUyEX1NYf1hNbYzEdauvPP1Q736u5FxpYbHVL4l5To9EhUhdwgzNQjk0lbsEbPmx_PBfWcNTVwFP_7YelYWp2dQJvS4a8J1IyMzmWxHhuLWXNkDyTl5_b8vLJYmhuLo7JZNKgVXhsEZcpCBCg2M3qRwJ19anCc1ip-vwBno5HWn4wg0wHntOKdW33S-k6FGNkDXqedA73kS6zac"/>
+</div>
+<div>
+<h5 class="font-bold">David Chen</h5>
+<p class="text-xs text-on-surface-variant">CTO at Vertex Solutions</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-3xl relative">
+<span class="material-symbols-outlined text-primary/20 text-7xl absolute top-8 right-8">format_quote</span>
+<p class="text-lg leading-relaxed mb-8 relative z-10 italic">"Design is no longer a bottleneck for us. The design system they built allowed our engineering team to ship features 3x faster while maintaining brand integrity."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="Client profile picture: Female product manager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWCYTutQLTsFvGTXUdcjyFZZyKdyGc4to9gn-hnigptQRvYdy2w_HzNe_-esOl7rpoG27kkBlE5x3FG44i8clhLzSuwn_fct0-sfY76mMxAGB9k_YRkR4aecqRhg2-_Uz5qQ_UpHJQIk7GdUP296VUQwsS9cUHO0dnsMZMVBgWDPVbwvPr_-yyyCwIcnyeQhE0AUgv2c8eqcH_GuRjtdvNL3e_YNlGrM0h_osqXyJDEu-kUujTbWiVcUh_lD9rpQh7oD1NYmBJu-0"/>
+</div>
+<div>
+<h5 class="font-bold">Sarah Williams</h5>
+<p class="text-xs text-on-surface-variant">Head of Product at Bloom</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call To Action -->
+<section class="py-24 relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/5 blur-[150px] rounded-full"></div>
+<div class="max-w-4xl mx-auto px-6 relative z-10 text-center glass-card py-20 rounded-[3rem] border border-primary/10">
+<h2 class="font-headline text-4xl md:text-6xl font-bold mb-6">Ready to Elevate Your Digital Product?</h2>
+<p class="text-on-surface-variant text-xl mb-10 max-w-2xl mx-auto">Let's build something extraordinary together. Book a free consultation to discuss your vision.</p>
+<button class="neural-gradient text-on-primary-container px-12 py-5 rounded-2xl font-label font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-primary/30">
+                Book My Design Strategy Call
+            </button>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-20">
+<div>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-8">Start a Conversation</h2>
+<p class="text-on-surface-variant mb-12 text-lg">Have a specific project in mind? Fill out the form and our design lead will get back to you within 24 hours.</p>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">Email Us</p>
+<p class="text-lg font-bold">hello@neuralamber.design</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">Call Us</p>
+<p class="text-lg font-bold">+1 (555) 234-DESIGN</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-[2.5rem]">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-label text-on-surface-variant px-1">Name</label>
+<input class="w-full bg-surface-container-lowest border-0 rounded-xl px-4 py-4 focus:ring-1 focus:ring-primary/40 text-on-surface" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-label text-on-surface-variant px-1">Email</label>
+<input class="w-full bg-surface-container-lowest border-0 rounded-xl px-4 py-4 focus:ring-1 focus:ring-primary/40 text-on-surface" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-label text-on-surface-variant px-1">Service Required</label>
+<select class="w-full bg-surface-container-lowest border-0 rounded-xl px-4 py-4 focus:ring-1 focus:ring-primary/40 text-on-surface appearance-none">
+<option>UI/UX Design</option>
+<option>Web Design</option>
+<option>Design System</option>
+<option>Product Consulting</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-label text-on-surface-variant px-1">Project Details</label>
+<textarea class="w-full bg-surface-container-lowest border-0 rounded-xl px-4 py-4 focus:ring-1 focus:ring-primary/40 text-on-surface" placeholder="Tell us about your project goals..." rows="4"></textarea>
+</div>
+<button class="w-full neural-gradient text-on-primary-container font-bold py-5 rounded-xl text-lg hover:opacity-90 transition-opacity">
+                            Send Message
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface py-20 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="md:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 neural-gradient rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">deployed_code</span>
+</div>
+<span class="font-headline font-bold text-2xl tracking-tight">Neural Amber</span>
+</div>
+<p class="text-on-surface-variant max-w-sm mb-8">
+                        An elite UI/UX design collective dedicated to pushing the boundaries of digital human interaction.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">language</span>
+</a>
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h6 class="font-bold mb-6">Expertise</h6>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">UI/UX Design</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Mobile First</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">SaaS Design</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Design Systems</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold mb-6">Company</h6>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Process</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Case Studies</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-outline-variant/10 text-xs text-on-surface-variant gap-4">
+<p>© 2024 Digital Technology Company. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
